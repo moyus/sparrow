@@ -1,0 +1,6 @@
+{
+  "name": "Sparrow",
+  "tagline": "Sparrow是一款针对移动web app开发的前端轻量级框架.",
+  "body": "Sparrow是一款针对移动web app开发的前端轻量级框架。\r\n\r\n##安装\r\n运行以下命令进行编译程序，将会自动生成`app`目录(参考演示)。Sparrow编译的所需静态资源均在`app/assets目录下`。\r\n    npm run build\r\n\r\n如果你想开启本地即时编译及预览开发环境，运行以下命令即可当文件发生变化时自动编译更新演示。\r\n    npm run dev\r\n\r\n##演示\r\n![2016-08-15_g-sparrow.jpg](http://cloud.liuxinyu.me/2016-08-15_g-sparrow.jpg)\r\n[https://moyus.github.io/sparrow](https://moyus.github.io/sparrow)\r\n\r\n##UI库\r\n- 布局\r\n  - 栅格\r\n- 常规元素\r\n  - 按钮\r\n  - 表单\r\n  - 进度条\r\n  - 图标\r\n  - 正文排版\r\n  - 辅助类\r\n- 组件\r\n  - 布告框\r\n  - 操作信息\r\n  - 卡片\r\n  - 列表\r\n  - 导航\r\n  - 导航条\r\n  - 菜单栏\r\n  - 进度条\r\n  - 评论列表\r\n  - 选项卡切换 - (js)\r\n  - 模态窗口 - (js)\r\n  - 确认窗口 - (js)\r\n  - 消息提示 - (js)\r\n\r\n##文档\r\n- 命名规范\r\n- JavaScript组件使用文档\r\n\r\n##第三方依赖库\r\n- [Zepto](http://zeptojs.com)\r\n  Sparrow内置的js相关组件依赖于Zepto库进行执行，而且需要其中的fx, fx_methods, data模块。因为Zepto官方默认脚本文件并不自带这些模块，而且ie模块并无必要，所以针对本框架我们自行编译了一份自定义的Zepto库，所以请在项目中引入我们已编译好的自定义版本Zepto文件。\r\n- [FastClick](https://github.com/ftlabs/fastclick)\r\n  移动端页面默认会有300ms点击延迟，这非常影响体检，而且也无法触发元素的active状态。为此需要引入FastClick第三方库来解决这个问题。本框架并未自带此库，需要用户自行下载并引入使用。\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
