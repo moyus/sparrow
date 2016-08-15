@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Tea">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>确认窗口 · Sparrow</title>
+        <link rel="stylesheet" href="assets/css/tea.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/tea.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="app">
+            <div class="TabBar">
+                <div class="TabBar__inner">
+                    <div class="Nav"> <a href="index.html" class="Nav__item">返回</a>
+                        <!-- /.Nav__item -->
+                    </div>
+                    <!-- /.Nav -->
+                </div>
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__inner">
+                    <div class="l-content u-pt20"> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-text">文本确认</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-title">标题确认</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cancel">取消按钮</button>                        <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cb">回调函数</button> </div>
+                </div>
+                <!-- END .Main__inner -->
+            </main>
+            <!-- /.Main -->
+        </div>
+        <!-- END .app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+        <script>
+            (function($)
+            {
+                $('.js-text').on('click', function(e)
+                {
+                    sal(
+                    {
+                        text: '你确认要这么做吗？'
+                    });
+                });
+                $('.js-title').on('click', function(e)
+                {
+                    sal(
+                    {
+                        title: '警告',
+                        text: '一旦执行将无法撤销次操作！'
+                    });
+                });
+                $('.js-cancel').on('click', function(e)
+                {
+                    sal(
+                    {
+                        text: '你想好了吗？',
+                        showCancelBtn: true,
+                        cancenBtnText: '算球了',
+                        confirmBtnText: '走起'
+                    });
+                });
+                $('.js-cb').on('click', function(e)
+                {
+                    sal(
+                    {
+                        text: '点击按钮会有惊喜哟！',
+                        showCancelBtn: true
+                    }, function(isConfirm)
+                    {
+                        if (isConfirm)
+                        {
+                            notify(
+                            {
+                                text: '你点击了确认按钮'
+                            });
+                        }
+                        else
+                        {
+                            notify(
+                            {
+                                text: '你点击了取消按钮'
+                            });
+                        }
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
+
+</html>

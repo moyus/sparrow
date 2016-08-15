@@ -1,117 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Sparrow by moyus</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Sparrow</h1>
-        <p>Sparrow是一款针对移动web app开发的前端轻量级框架.</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Tea">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>Sparrow</title>
+        <link rel="stylesheet" href="assets/css/tea.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/tea.js"></script>
+    </head>
 
-        <p class="view"><a href="https://github.com/moyus/sparrow">View the Project on GitHub <small>moyus/sparrow</small></a></p>
+    <body>
+        <div id="app" class="app">
+            <div class="TabBar">
+                <div class="TabBar__left"> </div>
+                <!-- END .TabBar__right -->
+                <div class="TabBar__inner">
+                    <ul class="Nav">
+                        <li class="Nav__item"> <a href="https://moyus.github.io/sparrow" class="Nav__link">
+                        GitHub Repo
+                    </a> </li>
+                        <li class="Nav__item"> <a role="button" class="Nav__link">
+                        Sparrow v1.0.0-alpha
+                    </a> </li>
+                    </ul>
+                    <!-- END .Nav -->
+                </div>
+                <!-- END .TabBar__inner -->
+                <div class="TabBar__right">
+                    <div class="l-content"> <button class="btn btn--primary js-surprise">点我试试</button> </div>
+                </div>
+                <!-- END .TabBar__right -->
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__left"></div>
+                <div class="l-main__right">
+                    <div class="l-content">
+                        <div class="u-pt30"> 这里还能放点只有PC端才能看到小广告<br> <img data-src="holder.js/150x150&text=Qr"> </div>
+                    </div>
+                </div>
+                <div class="l-main__inner">
+                    <div class="u-ptb15"></div>
+                    <div class="l-content">
+                        <div class="l-group__title">常规元素</div>
+                    </div>
+                    <div class="List-group">
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="buttons.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">按钮</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="form.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">表单</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="grid.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">栅格</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="content.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">富文本排版</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="icons.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">图标</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="utilities.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">辅助类</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END .List -->
+                    <div class="l-content">
+                        <div class="l-group__title">组件</div>
+                    </div>
+                    <div class="List-group">
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="list.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">列表</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="navs.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">导航条</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="cards.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">卡片</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="notices.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">布告框</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="progress.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">进度条</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="messages.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">操作信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="comments.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">评论</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="List-gap">JavaScript交互组件</div>
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="modals.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">模态窗口</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="notify.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">消息提示</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="smart-alert.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">确认窗口</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="tabs.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">选项卡切换</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END .List-group -->
+                </div>
+                <!-- END .l-main__inner -->
+            </main>
+            <!-- END .l-main-->
+        </div>
+        <!-- END .app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
 
-
-        <ul>
-          <li><a href="https://github.com/moyus/sparrow/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/moyus/sparrow/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/moyus/sparrow">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>Sparrow是一款针对移动web app开发的前端轻量级框架。</p>
-
-<h2>
-<a id="安装" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装</h2>
-
-<p>运行以下命令进行编译程序，将会自动生成<code>app</code>目录(参考演示)。Sparrow编译的所需静态资源均在<code>app/assets目录下</code>。
-    npm run build</p>
-
-<p>如果你想开启本地即时编译及预览开发环境，运行以下命令即可当文件发生变化时自动编译更新演示。
-    npm run dev</p>
-
-<h2>
-<a id="演示" class="anchor" href="#%E6%BC%94%E7%A4%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>演示</h2>
-
-<p><img src="http://cloud.liuxinyu.me/2016-08-15_g-sparrow.jpg" alt="2016-08-15_g-sparrow.jpg">
-<a href="https://moyus.github.io/sparrow">https://moyus.github.io/sparrow</a></p>
-
-<h2>
-<a id="ui库" class="anchor" href="#ui%E5%BA%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI库</h2>
-
-<ul>
-<li>布局
-
-<ul>
-<li>栅格</li>
-</ul>
-</li>
-<li>常规元素
-
-<ul>
-<li>按钮</li>
-<li>表单</li>
-<li>进度条</li>
-<li>图标</li>
-<li>正文排版</li>
-<li>辅助类</li>
-</ul>
-</li>
-<li>组件
-
-<ul>
-<li>布告框</li>
-<li>操作信息</li>
-<li>卡片</li>
-<li>列表</li>
-<li>导航</li>
-<li>导航条</li>
-<li>菜单栏</li>
-<li>进度条</li>
-<li>评论列表</li>
-<li>选项卡切换 - (js)</li>
-<li>模态窗口 - (js)</li>
-<li>确认窗口 - (js)</li>
-<li>消息提示 - (js)</li>
-</ul>
-</li>
-</ul>
-
-<h2>
-<a id="文档" class="anchor" href="#%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>文档</h2>
-
-<ul>
-<li>命名规范</li>
-<li>JavaScript组件使用文档</li>
-</ul>
-
-<h2>
-<a id="第三方依赖库" class="anchor" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9D%E8%B5%96%E5%BA%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>第三方依赖库</h2>
-
-<ul>
-<li>
-<a href="http://zeptojs.com">Zepto</a>
-Sparrow内置的js相关组件依赖于Zepto库进行执行，而且需要其中的fx, fx_methods, data模块。因为Zepto官方默认脚本文件并不自带这些模块，而且ie模块并无必要，所以针对本框架我们自行编译了一份自定义的Zepto库，所以请在项目中引入我们已编译好的自定义版本Zepto文件。</li>
-<li>
-<a href="https://github.com/ftlabs/fastclick">FastClick</a>
-移动端页面默认会有300ms点击延迟，这非常影响体检，而且也无法触发元素的active状态。为此需要引入FastClick第三方库来解决这个问题。本框架并未自带此库，需要用户自行下载并引入使用。</li>
-</ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/moyus">moyus</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
 </html>
