@@ -1,0 +1,63 @@
+{% extends 'master.nunjucks' %}
+{% block title %}选项卡切换 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+		<nav class="NavBar u-mb20">
+			<ul class="Nav Nav--tabs" data-group="tab">
+				<li class="Nav__item">
+					<a href="#panel-1" class="Nav__link is-active" data-toggle="tab">概要</a>
+				</li>
+				<li class="Nav__item">
+					<a href="#panel-2" class="Nav__link" data-toggle="tab">参数</a>
+				</li>
+				<li class="Nav__item">
+					<a href="#panel-3" class="Nav__link" data-toggle="tab">评论</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- END .NavBar -->
+		<div class="l-content tab-content">
+			<div id="panel-1" class="tab-pane is-active" role="tabpanel">
+                <p>
+                    我要给阿Q做正传，已经不止一两年了。但一面要做，一面又往回想，这足见我不是一个“立言”⑵的人，
+                    因为从来不朽之笔，须传不朽之人，于是人以文传，文以人传——究竟谁靠谁传，渐渐的不甚了然起来，
+                    而终于归接到传阿Q，仿佛思想里有鬼似的。
+                </p>
+            </div>
+            <!-- END .tab-panel -->
+            <div id="panel-2" class="tab-pane" role="tabpanel">
+                <p>
+                    第二，立传的通例，开首大抵该是“某，字某，某地人也”，而我并不知道阿Q姓什么。有一回，他似乎
+                    是姓赵，但第二日便模糊了。那是赵太爷的儿子进了秀才的时候，锣声镗镗的报到村里来，阿Q正喝了
+                    两碗黄酒，便手舞足蹈的说，这于他也很光采，因为他和赵太爷原来是本家，细细的排起来他还比秀才
+                    长三辈呢。其时几个旁听人倒也肃然的有些起敬了。那知道第二天，地保便叫阿Q到赵太爷家里去；太
+                    爷一见，满脸溅朱，喝道
+                </p>
+            </div>
+            <!-- END .tab-panel -->
+            <div id="panel-3" class="tab-pane" role="tabpanel">
+                <p>
+                    阿Q并没有抗辩他确凿姓赵，只用手摸着左颊，和地保退出去了；外面又被地保训斥了一番，谢了地保
+                    二百文酒钱。知道的人都说阿Q太荒唐，自己去招打；他大约未必姓赵，即使真姓赵，有赵太爷在这里，
+                    也不该如此胡说的。此后便再没有人提起他的氏族来，所以我终于不知道阿Q究竟什么姓。
+                </p>
+            </div>
+            <!-- END .tab-panel -->
+		</div>
+		<!-- END .l-content -->
+    </div>
+    <!-- END .l-container -->
+</main>
+<!-- /.Main -->
+{% endblock %}

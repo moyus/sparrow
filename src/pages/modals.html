@@ -1,0 +1,125 @@
+{% extends 'master.nunjucks' %}
+{% block title %}模态窗口 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- /.Nav__item -->
+        </div>
+        <!-- /.Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+        <div class="l-content u-pt20">
+            <button type="button" data-toggle="modal" data-target="#defaultModal" class="btn btn--primary btn--lg btn--block u-mb20">默认弹窗</button>
+            <button type="button" data-toggle="modal" data-target="#topModal" class="btn btn--primary btn--lg btn--block u-mb20">顶部弹窗</button>
+            <button type="button" data-toggle="modal" data-target="#bottomModal" class="btn btn--primary btn--lg btn--block u-mb20">底部弹窗</button>
+            <button type="button" data-toggle="modal" data-target="#fullModal" class="btn btn--primary btn--lg btn--block u-mb20">全屏弹窗</button>
+        </div>
+    </div>
+    <!-- END .Main__inner -->
+</main>
+<!-- /.Main -->
+{% endblock %}
+
+{% block footer %}
+<div id="defaultModal" class="Modal Modal--default">
+    <div class="Modal__body">
+        <header class="Modal__header">
+            <h4 class="Modal__title">弹窗标题</h4>
+            <!-- /.Modal__title -->
+        </header>
+        <!-- /.Modal__header -->
+        <div class="Modal__content">
+            自定义弹窗内容
+            <br>
+            ...
+        </div>
+        <!-- /.Modal__content -->
+        <footer class="Modal__footer">
+            <a role="button" class="Modal__btn" data-dismiss="modal">取消</a>
+            <a role="button" class="Modal__btn">确认</a>
+        </footer>
+        <!-- /.Modal__footer -->
+    </div>
+    <!-- /.Modal__body -->
+</div>
+<!-- /.Modal -->
+<div id="fullModal" class="Modal Modal--full">
+    <div class="Modal__body">
+        <header class="Modal__header">
+            <h4 class="Modal__title">弹窗标题</h4>
+            <!-- /.Modal__title -->
+        </header>
+        <!-- /.Modal__header -->
+        <div class="Modal__content">
+            自定义弹窗内容
+            <br>
+            ...
+        </div>
+        <!-- /.Modal__content -->
+        <footer class="Modal__footer">
+            <a role="button" class="Modal__btn" data-dismiss="modal">取消</a>
+            <a role="button" class="Modal__btn">确认</a>
+        </footer>
+        <!-- /.Modal__footer -->
+    </div>
+    <!-- /.Modal__body -->
+</div>
+<!-- /.Modal -->
+<div id="topModal" class="Modal Modal--top">
+    <div class="Modal__body">
+        <header class="Modal__header">
+            <h4 class="Modal__title">弹窗标题</h4>
+            <!-- /.Modal__title -->
+        </header>
+        <!-- /.Modal__header -->
+        <div class="Modal__content">
+            自定义弹窗内容
+            <br>
+            ...
+        </div>
+        <!-- /.Modal__content -->
+        <footer class="Modal__footer">
+            <a role="button" class="Modal__btn" data-dismiss="modal">取消</a>
+            <a role="button" class="Modal__btn">确认</a>
+        </footer>
+        <!-- /.Modal__footer -->
+    </div>
+    <!-- /.Modal__body -->
+</div>
+<!-- /.Modal -->
+<div id="bottomModal" class="Modal Modal--bottom">
+    <div class="Modal__body">
+        <div class="List-group List--actions">
+            <ul class="List">
+                <li class="Cell watch-active">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">拍照</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="Cell watch-active">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">从手机相册中选取</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="List-gap"></div>
+        </div>
+        <!-- END .List -->
+        <footer class="Modal__footer remove-hairline">
+            <a role="button" class="Modal__btn u-color-danger" data-dismiss="modal">取消</a>
+        </footer>
+        <!-- /.Modal__footer -->
+    </div>
+    <!-- /.Modal__body -->
+</div>
+<!-- /.Modal -->
+{% endblock %}

@@ -1,0 +1,30 @@
+/*
+|-------------------------------------------------------------------------------
+| #Content layouts
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+.l-container {
+  margin-left: $container-spacing;
+  margin-right: $container-spacing;
+}
+
+.l-content {
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+.l-group {
+  margin-bottom: 2rem;
+}
+.l-group__title {
+  position: relative;
+  display: block;
+  color: $sub-title-color;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}

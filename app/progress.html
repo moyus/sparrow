@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Tea">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>进度条 · Sparrow</title>
+        <link rel="stylesheet" href="assets/css/tea.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/tea.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="app">
+            <div class="TabBar">
+                <div class="TabBar__inner">
+                    <div class="Nav"> <a href="index.html" class="Nav__item">返回</a>
+                        <!-- END .Nav__item -->
+                    </div>
+                    <!-- END .Nav -->
+                </div>
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__inner u-bg-white">
+                    <div class="l-content l-group u-pt30">
+                        <div class="Progress">
+                            <div class="Progress__bar" style="width: 70%;"> <span class="Progress__tip">70%</span> </div>
+                        </div>
+                        <!-- END .Progress -->
+                    </div>
+                    <div class="l-content l-group">
+                        <ul class="Step">
+                            <li class="Step__item"><span class="Step__tip">1</span></li>
+                            <li class="Step__item is-active"><span class="Step__tip">2</span></li>
+                            <li class="Step__item"><span class="Step__tip">3</span></li>
+                            <li class="Step__item"><span class="Step__tip">4</span></li>
+                        </ul>
+                        <!-- END .Step -->
+                    </div>
+                </div>
+            </main>
+            <!-- END .Main -->
+        </div>
+        <!-- END .app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
+
+</html>

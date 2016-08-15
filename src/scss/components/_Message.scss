@@ -1,0 +1,44 @@
+/*
+|-------------------------------------------------------------------------------
+| #Message
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Message {
+  position: relative;
+  text-align: center;
+  padding-top: 45px;
+  margin-bottom: 30px;
+}
+
+/* Elements
+---------------------------------*/
+.Message__media {
+  margin: 0 0 15px;
+}
+
+.Message__icon {
+  width: 100px;
+  height: 100px;
+}
+
+.Message__title {
+  color: $sub-title-color;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+.Message__content {
+  color: $desc-color;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Modifiers
+---------------------------------*/

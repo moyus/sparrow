@@ -1,0 +1,152 @@
+@import 'vars-color';
+@import 'z-index';
+// @import './themes/dark';
+
+// app
+$site-max-width:                                640px !default;
+$body-bg:                                       #f4f4f4 !default;
+$app-bg:                                        #f4f4f4 !default;
+
+$container-spacing:                             8px !default;
+$content-spacing:                               16px !default;
+$group-spacing:                                 20px !default;
+
+// wireframe kit
+$frame-border-color:                            #ddd !default;
+$frame-border-radius-sm:                        2px !default;
+$frame-border-radius-base:                      3px !default;
+$frame-border-radius-lg:                        5px !default;
+$frame-divider-color:                           #eee !default;
+$frame-bg-color:                                #f3f7f9 !default;
+$frame-active-bg-color:                         #f3f7f9 !default;
+$frame-text-color:                              #555 !default;
+
+$spacer-x-sm:                                   4px !default;
+$spacer-x-base:                                 8px !default;
+$spacer-x-lg:                                   12px !default;
+
+$spacer-y-sm:                                   10px !default;
+$spacer-y-base:                                 15px !default;
+$spacer-y-lg:                                   30px !default;
+
+
+// Colors used for variants of buttons, progress, tags, alerts etc.
+$color-primary:                                 #7266BA !default;
+$color-danger:                                  #E74C3C !default;
+$color-info:                                    #007AFF !default;
+$color-success:                                 #4CD964 !default;
+$color-warning:                                 #F5A623 !default;
+
+// Colors shades
+$color-black:                                   #000 !default;
+$color-white:                                   #fff !default;
+
+$mix-level-4:                                   40% !default;
+$mix-level-3:                                   20% !default;
+$mix-level-2:                                   10% !default;
+$mix-level-1:                                   5% !default;
+
+// Typography
+// -----------------------------------------------------------------------------
+$fontSize-h1:                                   36px !default;
+$fontSize-h2:                                   30px !default;
+$fontSize-h3:                                   24px !default;
+$fontSize-h4:                                   18px !default;
+$fontSize-h5:                                   14px !default;
+$fontSize-h6:                                   12px !default;
+
+$title-color:                                   $grey-900 !default;
+$sub-title-color:                               $grey-800 !default;
+$text-color:                                    #555 !default;
+$desc-color:                                    #616161 !default;
+$help-color:                                    $grey-500 !default;
+$link-color:                                    $color-primary !default;
+
+$font-family:                                   "Helvetica Neue", "Hiragino Sans GB", sans-serif !default;
+$line-height-base:                              1.5 !default;
+$font-size-base:                                14px !default;
+
+// Grid
+// -----------------------------------------------------------------------------
+$grid-columns:                                  12 !default !default;
+$grid-gutter-width:                             10px !default !default;
+
+// Button
+// -----------------------------------------------------------------------------
+$button-border-radius-sm:                       $frame-border-radius-sm !default;
+$button-border-radius-base:                     $frame-border-radius-base !default;
+$button-border-radius-lg:                       $frame-border-radius-lg !default;
+$button-bg-base:                                #fff !default;
+$button-border-color-base:                      $frame-border-color !default;
+// Form
+// -----------------------------------------------------------------------------
+$form-group-spacing:                            $spacer-y-base !default;
+$form-control-border-radius:                    $frame-border-radius-lg !default;
+$form-control-bg:                               #fff !default;
+
+// Progress
+// -----------------------------------------------------------------------------
+$progress-bar-bg:                               $color-success !default;
+$step-active-bg:                                $color-primary !default;
+
+// List
+// -----------------------------------------------------------------------------
+$list-border-color:                             $frame-border-color !default;
+$list-divider-color:                            $frame-border-color !default;
+$list-active-bg:                                $frame-border-color !default;
+$list-border-radius:                            $frame-border-radius-base !default;
+$list-bg-color:                                 #fff !default;
+$list-group-spacer-y:                           30px !default;
+$list-spacer-x:                                 $content-spacing !default; // for inset list
+$cell-padding-x:                                15px !default; // spacer left
+
+// Navs & TabBar & NavBar
+// -----------------------------------------------------------------------------
+$nav-color:                                     $desc-color !default;
+$nav-label-color:                               rgba($desc-color, .8) !default;
+$nav-tabs-active-color:                         $color-primary !default;
+$nav-active-color:                              $color-primary !default;
+$nav-pills-color:                               #fff !default;
+$nav-pills-bg:                                  $color-primary !default;
+
+$navBar-height:                                 44px !default;
+$navBar-bg-color:                               #fff !default;
+$navBar-border-color:                           $frame-border-color !default;
+
+$tabBar-height:                                 50px !default;
+$tabBar-bg-color:                               rgba(255,255,255,.9) !default;
+$tabBar-border-color:                           $frame-border-color !default;
+$tabBar-text-color:                             $frame-text-color !default;
+
+// Modal
+// -----------------------------------------------------------------------------
+$modal-border-raidus:                           $frame-border-radius-base !default;
+$modal-width:                                   320px !default;
+$modal-bg:                                      #fff !default;
+$modal-padding-base:                            15px !default;
+
+// Card
+// -----------------------------------------------------------------------------
+$card-bg-color:                                 #fff !default;
+$card-border-color:                             $frame-border-color !default;
+$card-spacer-y:                                 $spacer-y-lg !default;
+$card-padding:                                  10px !default;
+$card-rounded-border-radius:                    $frame-border-radius-base !default;
+
+// Comment
+// -----------------------------------------------------------------------------
+$comment-spacer-x:                              $content-spacing !default;
+$comment-spacer-y:                              20px !default;
+
+
+// Box & Notice & Alert
+// -----------------------------------------------------------------------------
+$notice-border-radius:                          $frame-border-radius-base !default;
+$notice-padding:                                10px !default;
+
+$notice-palette: (
+  danger: #fad7d4,
+  info: #e5f4ff,
+  success: #e5f5e6,
+  warning: #fff4cc
+) !default;

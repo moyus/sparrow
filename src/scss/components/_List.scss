@@ -1,0 +1,166 @@
+/*
+|-------------------------------------------------------------------------------
+| #List
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Container
+---------------------------------*/
+.List-group {
+  position: relative;
+  margin-bottom: $list-group-spacer-y;
+  background-color: $list-bg-color;
+  @include hairline-border($list-border-color, 0);
+}
+
+.List-gap {
+  position: relative;
+  width: 100%;
+  padding: 5px $spacer-x-base;
+  line-height: 1.5;
+  font-size: 12px;
+  background-color: $frame-divider-color;
+  @include oneline;
+}
+
+/* Block
+---------------------------------*/
+.List {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .List {
+    @include hairline-top($list-divider-color);
+  }
+}
+
+/* Modifiers
+---------------------------------*/
+.List-inset {
+  margin-left: $list-spacer-x;
+  margin-right: $list-spacer-x;
+  border-radius: $list-border-radius;
+  @include hairline-border($list-border-color, $list-border-radius);
+}
+
+.List--full {
+  .Cell {
+    padding-left: .75rem;
+    @include hairline-top($list-divider-color);
+    &:first-child {
+      @include hairline-transparent(top);
+    }
+  }
+  .Cell__body {
+    padding-right: .75rem;
+    @include remove-hairline();
+  }
+  .Cell--link:active {
+    & + .Cell {
+    @include hairline-transparent(top);
+    }
+  }
+}
+
+.List--actions {
+  margin: 0;
+  text-align: center;
+  @include remove-hairline();
+  .Cell {
+    padding-left: 0;
+  }
+  .Cell__body {
+    padding-right: 0;
+  }
+}
+
+/* Block
+---------------------------------*/
+.Cell {
+  position: relative;
+  padding-left: $cell-padding-x;
+  @include remove-select();
+
+  &:first-child > .Cell__body {
+    @include hairline-transparent(top);
+  }
+
+}
+
+/* Elements
+---------------------------------*/
+.Cell__body {
+  position: relative;
+  color: inherit;
+  display: flex;
+  align-items: stretch;
+  min-height: 44px;
+  padding-right: $cell-padding-x;
+  @include hairline-top($list-divider-color);
+}
+
+.Cell__media {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  + .Cell__inner {
+    margin-left: $spacer-x-base
+  }
+
+  i + i,
+  img + img {
+    margin-left: $spacer-x-sm
+  }
+  img {
+    vertical-align: bottom;
+  }
+}
+
+.Cell__inner {
+  flex: 1;
+  display: flex;
+  color: $text-color;
+  font-size: 17px;
+  align-items: center;
+  + .Cell__media {
+    margin-left: $spacer-x-base;
+  }
+}
+
+.Cell__content {
+  flex: 1;
+}
+
+.Cell__after {
+  padding-left: $spacer-x-sm;
+  color: $help-color;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Modifiers
+---------------------------------*/
+.Cell--link {
+  .Cell__body {
+    padding-right: 35px;
+    background-image: url(arrow-right.svg);
+    background-position: calc(100% - #{$cell-padding-x}) center;
+    background-size: auto 13px;
+    background-repeat: no-repeat;
+  }
+}
+
+.Cell--link,
+.Cell.watch-active {
+  &:active {
+    background-color: $list-active-bg;
+    > .Cell__body,
+    & + .Cell > .Cell__body {
+      @include hairline-transparent(top);
+    }
+  }
+}

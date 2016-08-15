@@ -1,0 +1,11 @@
+@mixin remove-select() {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+@mixin oneline() {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

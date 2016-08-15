@@ -1,0 +1,50 @@
+/*
+|-------------------------------------------------------------------------------
+| #Level
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.l-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.is-top {
+    align-items: flex-start; 
+  }
+
+  > .l-level__item {
+    flex: 1;
+    text-align: center;
+  }
+
+}
+
+.l-level__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .l-level__item:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+}
+
+.l-level__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .l-level__item:not(:first-child) {
+    margin-left: .5rem;
+  }
+
+}
+
+.l-level__item {
+
+}

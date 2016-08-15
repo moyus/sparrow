@@ -1,0 +1,28 @@
+@mixin make-spacer($position: b, $distance: 5, $pro: "margin") {
+
+  @if $position == l {
+      #{$pro}-left: $distance !important;
+  } @else if $position == t {
+      #{$pro}-top: $distance !important;
+  } @else if $position == r {
+      #{$pro}-right: $distance !important;
+  } @else if $position == b {
+      #{$pro}-bottom: $distance !important;
+  } @else if $position == lr {
+      #{$pro}-left: $distance !important;
+      #{$pro}-right: $distance !important;
+  } @else if $position == tb {
+      #{$pro}-top: $distance !important;
+      #{$pro}-bottom: $distance !important;
+  }
+
+}
+
+@mixin loop-spacer($position: b, $step: 5, $range: 2, $pro: "margin", $prefix: "u-m") {
+  @for $i from 0 through $range {
+    $n: $i * $step;
+    .#{$prefix}#{$position}#{$n} {
+      @include make-spacer($position, $i * $step * 1px, $pro);
+    }
+  }
+}

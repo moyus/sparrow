@@ -1,0 +1,118 @@
+/*
+|-------------------------------------------------------------------------------
+| #Icons
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.teaIcon-check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-check.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-danger {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-error.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-warning {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-warning.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-clock {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-clock.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-help {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  mask-image: url(icon-help.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-infinite {
+  display: inline-block;
+  width: 25px;
+  height: 12px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-infinite.svg);
+  mask-position: center center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.teaIcon-refresh {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-refresh.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-remove {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-remove.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-cancel {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-cancel.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.teaIcon-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9e9e;
+  -webkit-mask-image: url(icon-spinner.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-animation: spin-around 1s linear infinite;
+  animation: spin-around 1s linear infinite;
+}

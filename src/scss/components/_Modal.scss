@@ -1,0 +1,193 @@
+/*
+|-------------------------------------------------------------------------------
+| #Modal
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: $modal-zIndex;
+}
+
+/* Elements
+---------------------------------*/
+.Modal__body {
+  position: relative;
+  max-width: $modal-width;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: $modal-border-raidus;
+  background-color: $modal-bg;
+  overflow: hidden;
+}
+
+.Modal__header {
+  position: relative;
+  padding: $modal-padding-base;
+  + .Modal__content {
+    padding-top: 0;
+  }
+}
+
+.Modal__title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.Modal__content {
+  padding: $modal-padding-base;
+  font-size: 14px;
+  max-height: 75vh;
+}
+
+.Modal__footer {
+  position: relative;
+  display: flex;
+  @include hairline-top($frame-border-color);
+}
+
+.Modal__btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  flex: 1;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  &:not(:last-child) {
+    @include hairline-right($frame-border-color);
+  }
+  &:active {
+    background-color: $frame-bg-color;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: $backdrop-Index;
+}
+
+/* Modifiers
+---------------------------------*/
+.Modal--default {
+  &.is-in {
+    .Modal__body {
+      animation-name: fadeInUp;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  &.is-out {
+    .Modal__body {
+      animation-name: fadeOutUp;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+.Modal--top {
+  align-items: flex-start;
+  &.is-in {
+    .Modal__body {
+      animation-name: fadeInDown;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  &.is-out {
+    .Modal__body {
+      animation-name: fadeOutUp;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  .Modal__body {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+
+.Modal--bottom {
+  align-items: flex-end;
+  &.is-in {
+    .Modal__body {
+      animation-name: fadeInUp;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  &.is-out {
+    .Modal__body {
+      animation-name: fadeOutDown;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  .Modal__body {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    border-radius: 0;
+    max-height: calc( 100% - 30px );
+  }
+}
+
+.Modal--full {
+  &.is-in {
+    .Modal__body {
+      animation-name: zoomIn;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  &.is-out {
+    .Modal__body {
+      animation-name: zoomOut;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  .Modal__body {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 45px;
+  }
+  .Modal__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.Modal--alert {
+  text-align: center;
+}

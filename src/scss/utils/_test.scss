@@ -1,0 +1,21 @@
+/*
+|-------------------------------------------------------------------------------
+| #Test
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.box-row {
+  position: relative;
+  min-height: 1rem;
+  padding: .2rem 0;
+  margin-bottom: .5rem;
+  background-color: #007FFF;
+  &.is-3h {
+    min-height: 3rem;
+  }
+  .box-row {
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.2);
+  }
+}

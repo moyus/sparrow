@@ -1,0 +1,46 @@
+/*
+|-------------------------------------------------------------------------------
+| #NavBar
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.NavBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $navBar-height;
+  background-color: $navBar-bg-color;
+  @include hairline-bottom($navBar-border-color);
+  @include remove-select();
+  z-index: $navBar-zIndex;
+}
+
+/* Elements
+---------------------------------*/
+.NavBar__left {
+  display: flex;
+  justify-content: flex-start;
+  .NavBar__item:not(:last-child) {
+    margin-right: $spacer-x-base;
+  }
+}
+.NavBar__center {
+  flex-shrink: 0;
+}
+.NavBar__right {
+  display: flex;
+  justify-content: flex-end;
+  .NavBar__item:not(:first-child) {
+    margin-left: $spacer-x-base;
+  }
+}
+
+.NavBar > .NavBar__item {
+  flex: 1;
+  text-align: center;
+}

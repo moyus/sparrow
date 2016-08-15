@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Tea">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>Sparrow</title>
+        <link rel="stylesheet" href="assets/css/tea.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/tea.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="app">
+            <div class="TabBar">
+                <div class="TabBar__left"> </div>
+                <!-- END .TabBar__right -->
+                <div class="TabBar__inner">
+                    <ul class="Nav">
+                        <li class="Nav__item"> <a href="https://moyus.github.io/sparrow" class="Nav__link">
+                        GitHub Repo
+                    </a> </li>
+                        <li class="Nav__item"> <a role="button" class="Nav__link">
+                        Sparrow v1.0.0-alpha
+                    </a> </li>
+                    </ul>
+                    <!-- END .Nav -->
+                </div>
+                <!-- END .TabBar__inner -->
+                <div class="TabBar__right">
+                    <div class="l-content"> <button class="btn btn--primary js-surprise">点我试试</button> </div>
+                </div>
+                <!-- END .TabBar__right -->
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__left"></div>
+                <div class="l-main__right">
+                    <div class="l-content">
+                        <div class="u-pt30"> 这里还能放点只有PC端才能看到小广告<br> <img data-src="holder.js/150x150&text=Qr"> </div>
+                    </div>
+                </div>
+                <div class="l-main__inner">
+                    <div class="u-ptb15"></div>
+                    <div class="l-content">
+                        <div class="l-group__title">常规元素</div>
+                    </div>
+                    <div class="List-group">
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="buttons.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">按钮</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="form.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">表单</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="grid.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">栅格</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="content.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">富文本排版</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="icons.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">图标</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="utilities.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">辅助类</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END .List -->
+                    <div class="l-content">
+                        <div class="l-group__title">组件</div>
+                    </div>
+                    <div class="List-group">
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="list.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">列表</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="navs.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">导航条</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="cards.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">卡片</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="notices.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">布告框</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="progress.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">进度条</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="messages.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">操作信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="comments.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">评论</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="List-gap">JavaScript交互组件</div>
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="modals.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">模态窗口</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="notify.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">消息提示</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="smart-alert.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">确认窗口</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="Cell Cell--link">
+                                <a href="tabs.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">选项卡切换</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END .List-group -->
+                </div>
+                <!-- END .l-main__inner -->
+            </main>
+            <!-- END .l-main-->
+        </div>
+        <!-- END .app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
+
+</html>

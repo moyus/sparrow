@@ -1,0 +1,73 @@
+/*
+|-------------------------------------------------------------------------------
+| #Notify
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Notify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0);
+  z-index: 2008;
+  overflow: hidden;
+}
+
+
+/* Elements
+---------------------------------*/
+.Notify__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 8px auto;
+  &[class^="teaIcon-"] {
+    background-color: #fff;
+  }
+}
+
+.Notify__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.6);
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Modifiers
+---------------------------------*/
+.Notify--lg {
+
+  .Notify__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .Notify__content {
+    width: 160px;
+    height: 120px;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+}

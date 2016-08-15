@@ -1,0 +1,149 @@
+{% extends 'master.nunjucks' %}
+{% block title %}列表 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- /.Nav__item -->
+        </div>
+        <!-- /.Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+        <div class="List-group">
+            <ul class="List">
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">默认项目</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">带描述信息的项目</div>
+                            <div class="Cell__after">描述文字</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">这是链接</div>
+                        </div>
+                    </a>
+                </li>
+                <!-- END .Cell -->
+            </ul>
+        </div>
+        <!-- END .List-group -->
+        <div class="List-group">
+            <ul class="List">
+                <li class="Cell Cell--link">
+                    <div class="Cell__body">
+                        <div class="Cell__media">
+                            <img data-src="holder.js/30x30?theme=sky&text=T">
+                        </div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">乔布斯</div>
+                            <div class="Cell__after">CEO</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="Cell Cell--link">
+                    <div class="Cell__body">
+                        <div class="Cell__media">
+                            <img data-src="holder.js/30x30?theme=sky&text=T">
+                            <img data-src="holder.js/30x30?theme=sky&text=T">
+                        </div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">2个图标</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="List-gap">这是一条分割线</div>
+            <ul class="List">
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">这没图标</div>
+                        </div>
+                    </div>
+                    <ul class="List">
+                        <li class="Cell">
+                            <div class="Cell__body">
+                                <div class="Cell__media">
+                                    <img data-src="holder.js/30x30?theme=sky&text=T">
+                                </div>
+                                <div class="Cell__inner">
+                                    <div class="Cell__content">二级列表</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="Cell Cell--link">
+                            <div class="Cell__body">
+                                <div class="Cell__media">
+                                    <img data-src="holder.js/30x30?theme=sky&text=T">
+                                </div>
+                                <div class="Cell__inner">
+                                    <div class="Cell__content">雷布斯</div>
+                                    <div class="Cell__after">CEO</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- END .List -->
+        <div class="List-group List-inset">
+            <ul class="List">
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">第一章</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">第二章</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">第三章</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">第四章</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="Cell Cell--link">
+                    <a role="button" class="Cell__body">
+                        <div class="Cell__inner">
+                            <div class="Cell__content">第五章</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- END .List-group -->
+    </div>
+</main>
+<!-- /.Main -->
+{% endblock %}
