@@ -52,7 +52,7 @@ gulp.task('scripts', function () {
     ])
     .pipe(babel())
     .pipe(sourcemaps.init())
-    .pipe(concat('tea.js'))
+    .pipe(concat('sparrow.js'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scripts.dist))
     .pipe(notify('scripts build successfully.'));
@@ -62,7 +62,7 @@ gulp.task('scripts', function () {
  * Build Styles
  */
 gulp.task('styles', function () {
-  return gulp.src(paths.styles.src + '/tea.scss')
+  return gulp.src(paths.styles.src + '/sparrow.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded',

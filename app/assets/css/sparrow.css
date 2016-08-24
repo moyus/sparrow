@@ -1695,7 +1695,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
 |
 |
 */
-.teaIcon-check {
+.sicon-check {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1706,7 +1706,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-danger {
+.sicon-danger {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1717,7 +1717,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-warning {
+.sicon-warning {
   display: inline-block;
   width: 23px;
   height: 19px;
@@ -1728,7 +1728,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-clock {
+.sicon-clock {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1739,7 +1739,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-help {
+.sicon-help {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1751,7 +1751,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-infinite {
+.sicon-infinite {
   display: inline-block;
   width: 25px;
   height: 12px;
@@ -1765,7 +1765,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
           mask-repeat: no-repeat;
 }
 
-.teaIcon-refresh {
+.sicon-refresh {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1776,7 +1776,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-remove {
+.sicon-remove {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1787,7 +1787,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-cancel {
+.sicon-cancel {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1798,7 +1798,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-mask-repeat: no-repeat;
 }
 
-.teaIcon-spinner {
+.sicon-spinner {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -3472,7 +3472,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   margin: 0 auto 8px auto;
 }
 
-.Notify__icon[class^="teaIcon-"] {
+.Notify__icon[class^="scon-"] {
   background-color: #fff;
 }
 
@@ -4490,4 +4490,4 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   text-align: center !important;
 }
 
-/*# sourceMappingURL=tea.css.map */
+/*# sourceMappingURL=sparrow.css.map */

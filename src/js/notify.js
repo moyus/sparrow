@@ -82,13 +82,13 @@
 
       switch (this._config.type) {
         case 'loading':
-          icon = '<i class="teaIcon-spinner Notify__icon"></i>'
+          icon = '<i class="sicon-spinner Notify__icon"></i>'
           break;
         case 'danger':
-          icon = '<i class="teaIcon-danger Notify__icon"></i>'
+          icon = '<i class="sicon-danger Notify__icon"></i>'
           break;
         case 'success':
-          icon = '<i class="teaIcon-check Notify__icon"></i>'
+          icon = '<i class="sicon-check Notify__icon"></i>'
           break;
         case 'custom':
           icon = this._config.icon
