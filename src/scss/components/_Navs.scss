@@ -71,18 +71,6 @@
 
 /* Modifiers
 ---------------------------------*/
-.Nav--small {
-  .Nav__icon {
-    font-size: 20px;
-  }
-}
-
-.Nav--lg {
-  .Nav__icon {
-    font-size: 32px;
-  }
-}
-
 .Nav--tabs {
   align-self: stretch;
   .Nav__link {
@@ -93,7 +81,7 @@
   }
 }
 
-.Nav--pills {
+.Nav--segmented {
   display: inline-flex;
   justify-content: center;
   &.is-justify {
@@ -108,36 +96,35 @@
     padding: 8px 16px;
     &:active,
     &.is-active {
-      color: $nav-pills-color;
-      background-color: $nav-pills-bg;
+      color: $nav-segmented-color;
+      background-color: $nav-segmented-bg;
       .Nav__link,
       .Nav__label,
       .Nav__icon {
-        color: $nav-pills-color;
+        color: $nav-segmented-color;
       }
     }
   }
   .Nav__item {
     flex: none;
     width: auto;
-    color: $nav-pills-bg;
-    border: 1px solid $nav-pills-bg;
+    color: $nav-segmented-bg;
+    border: 1px solid $nav-segmented-bg;
     &:not(:last-child) {
       border-right: 0;
     }
     &:first-child {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      border-top-left-radius: $nav-segmented-border-radius;
+      border-bottom-left-radius: $nav-segmented-border-radius;
     }
     &:last-child {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: $nav-segmented-border-radius;
+      border-bottom-right-radius: $nav-segmented-border-radius;
     }
 
   }
 
 }
-
 
 /* Misc
 ---------------------------------*/

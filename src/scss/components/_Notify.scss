@@ -19,7 +19,7 @@
   justify-content: center;
   flex-direction: column;
   background-color: rgba(0,0,0,0);
-  z-index: 2008;
+  z-index: $notify-zIndex;
   overflow: hidden;
 }
 
@@ -31,7 +31,7 @@
   width: 20px;
   height: 20px;
   margin: 0 auto 8px auto;
-  &[class^="scon-"] {
+  &[class^="sicon-"] {
     background-color: #fff;
   }
 }

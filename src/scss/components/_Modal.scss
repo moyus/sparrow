@@ -28,7 +28,7 @@
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: $modal-border-raidus;
+  border-radius: $modal-border-radius;
   background-color: $modal-bg;
   overflow: hidden;
 }
@@ -153,6 +153,29 @@
     max-width: 100%;
     border-radius: 0;
     max-height: calc( 100% - 30px );
+  }
+}
+
+.Modal--max {
+  &.is-in {
+    .Modal__body {
+      animation-name: zoomIn;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  &.is-out {
+    .Modal__body {
+      animation-name: zoomOut;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  .Modal__body {
+    margin: 15px;
+    max-width: $site-max-width - 30px;
+    width: 100%;
+    max-height: calc(100vh - 30px);
   }
 }
 

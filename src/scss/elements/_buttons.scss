@@ -29,7 +29,7 @@
     cursor: not-allowed;
     &::before {
       animation: spin-around 500ms infinite linear;
-      border: 2px solid $help-color;
+      border: 2px solid $desc-color;
       border-radius: 8px;
       border-right-color: transparent;
       border-top-color: transparent;

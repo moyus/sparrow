@@ -7,17 +7,14 @@ $site-max-width:                                640px !default;
 $body-bg:                                       #f4f4f4 !default;
 $app-bg:                                        #f4f4f4 !default;
 
-$container-spacing:                             8px !default;
-$content-spacing:                               16px !default;
-$group-spacing:                                 20px !default;
-
 // wireframe kit
 $frame-border-color:                            #ddd !default;
+$frame-divider-color:                           #eee !default;
+$frame-line-color:                              #ddd !default;
 $frame-border-radius-sm:                        2px !default;
 $frame-border-radius-base:                      3px !default;
 $frame-border-radius-lg:                        5px !default;
-$frame-divider-color:                           #eee !default;
-$frame-bg-color:                                #f3f7f9 !default;
+$frame-bg-color:                                #fff !default;
 $frame-active-bg-color:                         #f3f7f9 !default;
 $frame-text-color:                              #555 !default;
 
@@ -29,6 +26,10 @@ $spacer-y-sm:                                   10px !default;
 $spacer-y-base:                                 15px !default;
 $spacer-y-lg:                                   30px !default;
 
+$container-spacer-x:                            8px !default;
+$content-spacer-x:                              15px !default;
+$group-spacer-x:                                $content-spacer-x !default;
+$group-spacer-y:                                30px !default;
 
 // Colors used for variants of buttons, progress, tags, alerts etc.
 $color-primary:                                 #7266BA !default;
@@ -59,30 +60,32 @@ $title-color:                                   $grey-900 !default;
 $sub-title-color:                               $grey-800 !default;
 $text-color:                                    #555 !default;
 $desc-color:                                    #616161 !default;
-$help-color:                                    $grey-500 !default;
 $link-color:                                    $color-primary !default;
 
 $font-family:                                   "Helvetica Neue", "Hiragino Sans GB", sans-serif !default;
 $line-height-base:                              1.5 !default;
+$font-size-lg:                                  17px !default;
 $font-size-base:                                14px !default;
+$font-size-sm:                                  12px !default;
 
 // Grid
 // -----------------------------------------------------------------------------
-$grid-columns:                                  12 !default !default;
-$grid-gutter-width:                             10px !default !default;
+$grid-columns:                                  12 !default;
+$grid-gutter-width:                             10px !default;
 
 // Button
 // -----------------------------------------------------------------------------
 $button-border-radius-sm:                       $frame-border-radius-sm !default;
 $button-border-radius-base:                     $frame-border-radius-base !default;
 $button-border-radius-lg:                       $frame-border-radius-lg !default;
-$button-bg-base:                                #fff !default;
+$button-bg-base:                                $frame-bg-color !default;
 $button-border-color-base:                      $frame-border-color !default;
+
 // Form
 // -----------------------------------------------------------------------------
-$form-group-spacing:                            $spacer-y-base !default;
+$form-group-spacer-y:                           $spacer-y-base !default;
 $form-control-border-radius:                    $frame-border-radius-lg !default;
-$form-control-bg:                               #fff !default;
+$form-control-bg:                               $frame-bg-color !default;
 
 // Progress
 // -----------------------------------------------------------------------------
@@ -91,14 +94,17 @@ $step-active-bg:                                $color-primary !default;
 
 // List
 // -----------------------------------------------------------------------------
-$list-border-color:                             $frame-border-color !default;
-$list-divider-color:                            $frame-border-color !default;
-$list-active-bg:                                $frame-border-color !default;
-$list-border-radius:                            $frame-border-radius-base !default;
-$list-bg-color:                                 #fff !default;
 $list-group-spacer-y:                           30px !default;
-$list-spacer-x:                                 $content-spacing !default; // for inset list
-$cell-padding-x:                                15px !default; // spacer left
+$list-group-border-color:                       $frame-border-color !default;
+$list-group-bg-color:                           $frame-bg-color !default;
+$list-group-inset-border-radius:                $frame-border-radius-base !default;
+$list-group-inset-spacer-x:                     $content-spacer-x !default;
+$list-divider-color:                            $frame-divider-color !default;
+$list-spacer-x:                                 15px !default; // for inset list
+$cell-spacer-x:                                 $content-spacer-x !default; // spacer left
+$cell-line-color:                               $frame-line-color;
+$cell-active-bg:                                $frame-line-color;
+$cell-font-size:                                17px;
 
 // Navs & TabBar & NavBar
 // -----------------------------------------------------------------------------
@@ -106,38 +112,38 @@ $nav-color:                                     $desc-color !default;
 $nav-label-color:                               rgba($desc-color, .8) !default;
 $nav-tabs-active-color:                         $color-primary !default;
 $nav-active-color:                              $color-primary !default;
-$nav-pills-color:                               #fff !default;
-$nav-pills-bg:                                  $color-primary !default;
+$nav-segmented-color:                               #fff !default;
+$nav-segmented-border-radius:                       $frame-border-radius-base !default;
+$nav-segmented-bg:                                  $color-primary !default;
 
 $navBar-height:                                 44px !default;
-$navBar-bg-color:                               #fff !default;
+$navBar-bg-color:                               $frame-bg-color !default;
 $navBar-border-color:                           $frame-border-color !default;
 
 $tabBar-height:                                 50px !default;
-$tabBar-bg-color:                               rgba(255,255,255,.9) !default;
+$tabBar-bg-color:                               rgba($frame-bg-color,.9) !default;
 $tabBar-border-color:                           $frame-border-color !default;
 $tabBar-text-color:                             $frame-text-color !default;
 
 // Modal
 // -----------------------------------------------------------------------------
-$modal-border-raidus:                           $frame-border-radius-base !default;
+$modal-border-radius:                           $frame-border-radius-base !default;
 $modal-width:                                   320px !default;
-$modal-bg:                                      #fff !default;
+$modal-bg:                                      $frame-bg-color !default;
 $modal-padding-base:                            15px !default;
 
 // Card
 // -----------------------------------------------------------------------------
-$card-bg-color:                                 #fff !default;
+$card-bg-color:                                 $frame-bg-color !default;
 $card-border-color:                             $frame-border-color !default;
 $card-spacer-y:                                 $spacer-y-lg !default;
 $card-padding:                                  10px !default;
-$card-rounded-border-radius:                    $frame-border-radius-base !default;
+$card-inset-border-radius:                      $frame-border-radius-base !default;
 
 // Comment
 // -----------------------------------------------------------------------------
-$comment-spacer-x:                              $content-spacing !default;
+$comment-spacer-x:                              $content-spacer-x !default;
 $comment-spacer-y:                              20px !default;
-
 
 // Box & Notice & Alert
 // -----------------------------------------------------------------------------

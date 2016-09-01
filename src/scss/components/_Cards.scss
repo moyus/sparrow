@@ -42,19 +42,18 @@
 
 .Card__title {
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 $spacer-x-sm 0;
   font-weight: bolder;
   line-height: 1.2;
   color: $sub-title-color;
 }
 
 .Card__content {
-  font-size: 14px;
-  color: $desc-color;
+
 }
 
 .Card__meta {
-  color: $help-color;
+  color: $desc-color;
   font-size: 12px;
   line-height: 1.2;
 }
@@ -69,7 +68,7 @@
 
 /* Modifers
 ---------------------------------*/
-.Card--rounded {
-  border-radius: $card-rounded-border-radius;
-  @include hairline-border($card-border-color, $card-rounded-border-radius);
+.Card--inset {
+  border-radius: $card-inset-border-radius;
+  @include hairline-border($card-border-color, $card-inset-border-radius);
 }

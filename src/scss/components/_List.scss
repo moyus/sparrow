@@ -11,17 +11,17 @@
 .List-group {
   position: relative;
   margin-bottom: $list-group-spacer-y;
-  background-color: $list-bg-color;
-  @include hairline-border($list-border-color, 0);
+  background-color: $list-group-bg-color;
+  @include hairline-border($list-group-border-color, 0);
 }
 
 .List-gap {
   position: relative;
   width: 100%;
-  padding: 5px $spacer-x-base;
+  padding: 5px $cell-spacer-x;
   line-height: 1.5;
   font-size: 12px;
-  background-color: $frame-divider-color;
+  background-color: $list-divider-color;
   @include oneline;
 }
 
@@ -33,36 +33,17 @@
   padding: 0;
   list-style: none;
   .List {
-    @include hairline-top($list-divider-color);
+    @include hairline-top($cell-line-color);
   }
 }
 
 /* Modifiers
 ---------------------------------*/
 .List-inset {
-  margin-left: $list-spacer-x;
-  margin-right: $list-spacer-x;
-  border-radius: $list-border-radius;
-  @include hairline-border($list-border-color, $list-border-radius);
-}
-
-.List--full {
-  .Cell {
-    padding-left: .75rem;
-    @include hairline-top($list-divider-color);
-    &:first-child {
-      @include hairline-transparent(top);
-    }
-  }
-  .Cell__body {
-    padding-right: .75rem;
-    @include remove-hairline();
-  }
-  .Cell--link:active {
-    & + .Cell {
-    @include hairline-transparent(top);
-    }
-  }
+  margin-left: $list-group-inset-spacer-x;
+  margin-right: $list-group-inset-spacer-x;
+  border-radius: $list-group-inset-border-radius;
+  @include hairline-border($list-group-border-color, $list-group-inset-border-radius);
 }
 
 .List--actions {
@@ -81,7 +62,7 @@
 ---------------------------------*/
 .Cell {
   position: relative;
-  padding-left: $cell-padding-x;
+  padding-left: $cell-spacer-x;
   @include remove-select();
 
   &:first-child > .Cell__body {
@@ -98,8 +79,8 @@
   display: flex;
   align-items: stretch;
   min-height: 44px;
-  padding-right: $cell-padding-x;
-  @include hairline-top($list-divider-color);
+  padding-right: $cell-spacer-x;
+  @include hairline-top($cell-line-color);
 }
 
 .Cell__media {
@@ -123,7 +104,7 @@
   flex: 1;
   display: flex;
   color: $text-color;
-  font-size: 17px;
+  font-size: $cell-font-size;
   align-items: center;
   + .Cell__media {
     margin-left: $spacer-x-base;
@@ -136,7 +117,7 @@
 
 .Cell__after {
   padding-left: $spacer-x-sm;
-  color: $help-color;
+  color: $desc-color;
   display: flex;
   align-items: center;
 }
@@ -148,7 +129,7 @@
   .Cell__body {
     padding-right: 35px;
     background-image: url(arrow-right.svg);
-    background-position: calc(100% - #{$cell-padding-x}) center;
+    background-position: calc(100% - #{$cell-spacer-x}) center;
     background-size: auto 13px;
     background-repeat: no-repeat;
   }
@@ -157,7 +138,7 @@
 .Cell--link,
 .Cell.watch-active {
   &:active {
-    background-color: $list-active-bg;
+    background-color: $cell-active-bg;
     > .Cell__body,
     & + .Cell > .Cell__body {
       @include hairline-transparent(top);

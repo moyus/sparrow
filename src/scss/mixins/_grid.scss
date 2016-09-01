@@ -7,18 +7,19 @@
 @mixin loop-cols() {
 
   .l-col {
-    flex: 1;
+    flex: 1 1 0;
+    min-height: 1px;
+    max-width: 100%;
     padding-left: ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
-    max-width: 100%;
   }
   @for $i from 1 through $grid-columns {
     .l-col-#{$i} {
-      flex: 0 0 auto;
+      flex: 0 0 get-col-percent($i);
+      min-height: 1;
+      max-width: get-col-percent($i);
       padding-left: ($grid-gutter-width / 2);
       padding-right: ($grid-gutter-width / 2);
-      flex-basis: get-col-percent($i);
-      max-width: get-col-percent($i);
     }
   }
 
