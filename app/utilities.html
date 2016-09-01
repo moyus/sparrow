@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Sparrow">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>辅助类 · Sparrow</title>
+        <link rel="stylesheet" href="assets/css/sparrow.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/sparrow.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="l-app">
+            <div class="TabBar">
+                <div class="TabBar__inner">
+                    <div class="Nav"> <a href="index.html" class="Nav__item">返回</a>
+                        <!-- END .Nav__item -->
+                    </div>
+                    <!-- END .Nav -->
+                </div>
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__inner">
+                    <div class="l-content u-pt30"> 文档撰写中... </div>
+                    <!-- END .content-block -->
+                </div>
+                <!-- END .l-main__inner -->
+            </main>
+            <!-- END .l-main -->
+        </div>
+        <!-- END .l-app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
+
+</html>

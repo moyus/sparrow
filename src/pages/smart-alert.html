@@ -1,0 +1,68 @@
+{% extends 'master.nunjucks' %}
+{% block title %}确认窗口 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+        <div class="l-content u-pt20">
+            <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-text">文本确认</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-title">标题确认</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cancel">取消按钮</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cb">回调函数</button>
+        </div>
+    </div>
+    <!-- END .Main__inner -->
+</main>
+<!-- /.Main -->
+{% endblock %}
+
+{% block footer %}
+<script>
+    (function($) {
+
+        $('.js-text').on('click', function(e) {
+            sal({
+				text: '你确认要这么做吗？'
+			});
+        });
+
+        $('.js-title').on('click', function(e) {
+			sal({
+				title: '警告',
+				text: '一旦执行将无法撤销次操作！'
+			});
+        });
+
+        $('.js-cancel').on('click', function(e) {
+			sal({
+				text: '你想好了吗？',
+				showCancelBtn: true,
+				cancenBtnText: '算球了',
+				confirmBtnText: '走起'
+			});
+        });
+
+        $('.js-cb').on('click', function(e) {
+			sal({
+				text: '点击按钮会有惊喜哟！',
+				showCancelBtn: true
+			}, function (isConfirm) {
+				if (isConfirm) {
+					notify({text: '你点击了确认按钮'});
+				} else {
+					notify({text: '你点击了取消按钮'});
+				}
+			});
+        });
+    })(Zepto);
+</script>
+{% endblock %}

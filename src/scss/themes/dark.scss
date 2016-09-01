@@ -1,0 +1,81 @@
+$body-bg:                                       #2E3E4E;
+$app-bg:                                        #2E3E4E;
+
+// wireframe kit
+$frame-border-color:                            rgba(120,130,140,.2);
+$frame-divider-color:                           rgba(120,130,140,.15);
+$frame-bg-color:                                rgba(255,255,255,.15);
+$frame-active-bg-color:                         rgba(255,255,255,.15);
+$frame-text-color:                              rgba(255,255,255,.87);
+
+// Colors used for variants of buttons, progress, tags, alerts etc.
+$color-primary:                                 #7266BA;
+$color-danger:                                  #E74C3C;
+$color-info:                                    #007AFF;
+$color-success:                                 #4CD964;
+$color-warning:                                 #F5A623;
+
+// Typography
+// -----------------------------------------------------------------------------
+
+$title-color:                                   #fff;
+$sub-title-color:                               rgba(255,255,255,.92);
+$text-color:                                    rgba(255,255,255,.87);
+$desc-color:                                    rgba(255,255,255,.8);
+$help-color:                                    rgba(255,255,255,.75);
+$link-color:                                    $color-primary;
+
+// Button
+// -----------------------------------------------------------------------------
+$button-bg-base:                                rgba(255,255,255,.1);
+$button-border-color-base:                      transparent;
+// Form
+// -----------------------------------------------------------------------------
+$form-control-bg:                               rgba(255,255,255,.1);
+
+// Progress
+// -----------------------------------------------------------------------------
+$progress-bar-bg:                               $color-success;
+$step-active-bg:                                $color-primary;
+
+// List
+// -----------------------------------------------------------------------------
+$list-border-color:                             rgba(0,0,0,.2);
+$list-divider-color:                            rgba(0,0,0,.15);
+$list-active-bg:                                $frame-border-color;
+$list-bg-color:                                 #354759;
+
+// Navs & TabBar & NavBar
+// -----------------------------------------------------------------------------
+$nav-color:                                     $desc-color;
+$nav-label-color:                               rgba($desc-color, .8);
+$nav-tabs-active-color:                         $color-primary;
+$nav-active-color:                              $color-primary;
+$nav-pills-color:                               $frame-text-color;
+$nav-pills-bg:                                  $color-primary;
+
+$navBar-bg-color:                               #354759;
+$navBar-border-color:                           rgba(0,0,0,.2);
+
+$tabBar-bg-color:                               #354759;
+$tabBar-border-color:                           rgba(0,0,0,.2);
+$tabBar-text-color:                             $frame-text-color;
+
+// Modal
+// -----------------------------------------------------------------------------
+$modal-bg:                                      #334456;
+
+// Card
+// -----------------------------------------------------------------------------
+$card-bg-color:                                 #334456;
+$card-border-color:                             $frame-border-color;
+
+
+// Box & Notice & Alert
+// -----------------------------------------------------------------------------
+$notice-palette: (
+  danger: #fad7d4,
+  info: #e5f4ff,
+  success: #e5f5e6,
+  warning: #fff4cc
+);

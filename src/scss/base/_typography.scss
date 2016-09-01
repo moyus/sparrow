@@ -1,0 +1,184 @@
+/* Heading
+---------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  color: $title-color;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+  small {
+    color: $desc-color;
+  }
+}
+
+h1 { font-size: $fontSize-h1 }
+h2 { font-size: $fontSize-h2 }
+h3 { font-size: $fontSize-h3 }
+h4 { font-size: $fontSize-h4 }
+h5 { font-size: $fontSize-h5 }
+h6 { font-size: $fontSize-h6 }
+
+/* Paragraphs
+---------------------------------*/
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ins,
+mark {
+  background: #ffa;
+}
+
+hr {
+  display: block;
+  padding: 0;
+  margin: 30px 0;
+  height: 0;
+  border: 0;
+  border-top: 1px solid $frame-divider-color;
+  box-sizing: content-box;
+}
+
+/* Link
+---------------------------------*/
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+/* List
+---------------------------------*/
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  ul, ol {
+    margin-bottom: 5px;
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0 0 15px 0;
+  }
+}
+
+/* Blockquote
+---------------------------------*/
+blockquote {
+  border-left: 2px solid $frame-border-color;
+  padding: 8px 4px;
+  cite {
+    color: $desc-color;
+  }
+
+  > p:first-child {
+    margin-top: 0;
+  }
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Code
+---------------------------------*/
+code, pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
+  line-height: 1.25;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 16px 20px;
+  background: #f5f7fa;
+  color: #69707a;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+code {
+  background: #f5f7fa;
+  color: #ed6c63;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1px 3px 3px;
+}
+
+pre code {
+  background: #f5f7fa;
+  color: #69707a;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Table
+---------------------------------*/
+caption {
+  text-align: left;
+  caption-side: top;
+}
+th {
+  text-align: left;
+}
+
+/* Figures
+---------------------------------*/
+figure {
+  margin: 0 0 10px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Form
+---------------------------------*/
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+label {
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+textarea {
+  resize: vertical;
+}
+
+/* Misc
+---------------------------------*/
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+[hidden] {
+  display: none !important;
+}
+[disabled],
+.is-disabled {
+  cursor: not-allowed;
+}

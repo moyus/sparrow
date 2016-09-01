@@ -1,0 +1,65 @@
+{% extends 'master.nunjucks' %}
+{% block title %}提示信息 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+        <div class="l-content u-pt20">
+            <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-loading">等待载入</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-text">文本消息</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-error">错误信息</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-success">成功提示</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-lg">大尺寸提示</button>
+			<button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cb">回调确认</button>
+        </div>
+    </div>
+    <!-- END .Main__inner -->
+</main>
+<!-- /.Main -->
+{% endblock %}
+
+{% block footer %}
+<script>
+    (function($) {
+
+        $('.js-text').on('click', function(e) {
+            notify({text: '不错哟', type: ''});
+        });
+
+        $('.js-loading').on('click', function(e) {
+            notify({text: '不错哟', type: 'loading'});
+        });
+
+        $('.js-error').on('click', function(e) {
+            notify({text: '不错哟', type: 'danger'});
+        });
+
+        $('.js-success').on('click', function(e) {
+            notify({text: '不错哟', type: 'success'});
+        });
+
+        $('.js-lg').on('click', function(e) {
+            notify({text: '不错哟', type: 'success', size: 'lg'});
+        });
+
+        $('.js-cb').on('click', function(e) {
+            var t = notify({text: '请点击屏幕', timer: 0});
+			var s = setTimeout(function () {
+				$(document).one('click', function(e) {
+					t.hide();
+				});
+				clearTimeout(s);
+			}, 200)
+        });
+    })(Zepto);
+</script>
+{% endblock %}

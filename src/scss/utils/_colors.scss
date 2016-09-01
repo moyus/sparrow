@@ -1,0 +1,40 @@
+// Background colors
+.u-bg-white {
+  background-color: #fff !important;
+}
+.u-bg-primary {
+  background-color: $color-primary !important;
+}
+.u-bg-success {
+  background-color: #4CD964 !important;
+}
+.u-bg-danger {
+  background-color: #FF3B30 !important;
+}
+.u-bg-warning {
+  background-color: $color-warning !important;
+}
+.u-bg-grey {
+  background-color: #9e9e9e !important;
+}
+.u-bg-none {
+  background: none !important;
+}
+
+// Colors
+.u-color-danger {
+  color: #FF3B30 !important;
+}
+.u-color-success {
+  color: #4CD964 !important;
+}
+.u-color-warning {
+  color: $color-warning !important;
+}
+.u-color-muted {
+  color: $desc-color;
+  opacity: 0.75;
+}
+.u-color-desc {
+  color: $desc-color;
+}

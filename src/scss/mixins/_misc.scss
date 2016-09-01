@@ -1,0 +1,42 @@
+@mixin remove-select() {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+@mixin oneline() {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//-------------------------------------
+// <figure class="u-ratio-16x9">
+//   <img src="whatever.jpg" />
+// </figure>
+//
+@mixin aspect-ration($width, $height) {
+  position: relative;
+  padding-bottom: ($height / $width) * 100%;
+  background-color: #ddd;
+  // background: #ddd url(holder.svg) no-repeat center center;
+  img,
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

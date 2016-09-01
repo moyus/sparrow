@@ -1,0 +1,38 @@
+{% extends 'master.nunjucks' %}
+{% block title %}布告栏 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+	<div class="l-main__inner u-bg-white">
+		<div class="Notice Notice--success Notice--sharp u-text-center">
+			<strong>提交成功！</strong>
+		</div>
+        <div class="l-content">
+			<div class="Notice Notice--warning">
+                如需转载此文，请注明原作者及此文链接地址！
+            </div>
+            <div class="Notice Notice--success">
+                <strong>更新成功！</strong> 你已成功更新了你的个人信息.
+            </div>
+            <div class="Notice Notice--info">
+                你有3条未处理的消息.
+            </div>
+            <div class="Notice Notice--danger has-close">
+                <span class="Notice__close" aria-label="Close">&times;</span>
+                服务器发生未知错误，请尝试刷新此页面！
+            </div>
+    	</div>
+    	<!-- END .content-block -->
+	</div>
+</main>
+<!-- END .Main -->
+{% endblock %}

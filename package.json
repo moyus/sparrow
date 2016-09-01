@@ -1,0 +1,42 @@
+{
+  "name": "sparrow",
+  "version": "1.0.0-alpha.1",
+  "description": "a light mobile web app front-end framework.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp",
+    "dev": "./node_modules/.bin/gulp dev"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "web",
+    "mobile",
+    "web-app",
+    "front-end",
+    "framework"
+  ],
+  "homepage": "https://moyus.github.io/sparrow",
+  "author": "moyu <moyuboy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-svg": "^1.2.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sizereport": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4"
+  }
+}

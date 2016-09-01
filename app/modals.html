@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Sparrow">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>模态窗口 · Sparrow</title>
+        <link rel="stylesheet" href="assets/css/sparrow.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/sparrow.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="l-app">
+            <div class="TabBar">
+                <div class="TabBar__inner">
+                    <div class="Nav"> <a href="index.html" class="Nav__item">返回</a>
+                        <!-- END .Nav__item -->
+                    </div>
+                    <!-- END .Nav -->
+                </div>
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__inner">
+                    <div class="l-content u-pt20"> <button type="button" data-toggle="modal" data-target="#defaultModal" class="btn btn--primary btn--lg btn--block u-mb20">默认弹窗</button> <button type="button" data-toggle="modal" data-target="#topModal" class="btn btn--primary btn--lg btn--block u-mb20">顶部弹窗</button>                        <button type="button" data-toggle="modal" data-target="#bottomModal" class="btn btn--primary btn--lg btn--block u-mb20">底部弹窗</button> <button type="button" data-toggle="modal" data-target="#fullModal" class="btn btn--primary btn--lg btn--block u-mb20">全屏弹窗</button>                        </div>
+                </div>
+                <!-- END .Main__inner -->
+            </main>
+            <!-- /.Main -->
+        </div>
+        <!-- END .l-app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+        <div id="defaultModal" class="Modal Modal--default">
+            <div class="Modal__body">
+                <header class="Modal__header">
+                    <h4 class="Modal__title">弹窗标题</h4>
+                    <!-- /.Modal__title -->
+                </header>
+                <!-- /.Modal__header -->
+                <div class="Modal__content"> 自定义弹窗内容 <br> ... </div>
+                <!-- /.Modal__content -->
+                <footer class="Modal__footer"> <a role="button" class="Modal__btn" data-dismiss="modal">取消</a> <a role="button" class="Modal__btn">确认</a> </footer>
+                <!-- /.Modal__footer -->
+            </div>
+            <!-- /.Modal__body -->
+        </div>
+        <!-- /.Modal -->
+        <div id="fullModal" class="Modal Modal--full">
+            <div class="Modal__body">
+                <header class="Modal__header">
+                    <h4 class="Modal__title">弹窗标题</h4>
+                    <!-- /.Modal__title -->
+                </header>
+                <!-- /.Modal__header -->
+                <div class="Modal__content"> 自定义弹窗内容 <br> ... </div>
+                <!-- /.Modal__content -->
+                <footer class="Modal__footer"> <a role="button" class="Modal__btn" data-dismiss="modal">取消</a> <a role="button" class="Modal__btn">确认</a> </footer>
+                <!-- /.Modal__footer -->
+            </div>
+            <!-- /.Modal__body -->
+        </div>
+        <!-- /.Modal -->
+        <div id="topModal" class="Modal Modal--top">
+            <div class="Modal__body">
+                <header class="Modal__header">
+                    <h4 class="Modal__title">弹窗标题</h4>
+                    <!-- /.Modal__title -->
+                </header>
+                <!-- /.Modal__header -->
+                <div class="Modal__content"> 自定义弹窗内容 <br> ... </div>
+                <!-- /.Modal__content -->
+                <footer class="Modal__footer"> <a role="button" class="Modal__btn" data-dismiss="modal">取消</a> <a role="button" class="Modal__btn">确认</a> </footer>
+                <!-- /.Modal__footer -->
+            </div>
+            <!-- /.Modal__body -->
+        </div>
+        <!-- /.Modal -->
+        <div id="bottomModal" class="Modal Modal--bottom">
+            <div class="Modal__body">
+                <div class="List-group List--actions">
+                    <ul class="List">
+                        <li class="Cell watch-active">
+                            <a role="button" class="Cell__body">
+                                <div class="Cell__inner">
+                                    <div class="Cell__content">拍照</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="Cell watch-active">
+                            <a role="button" class="Cell__body">
+                                <div class="Cell__inner">
+                                    <div class="Cell__content">从手机相册中选取</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="List-gap"></div>
+                </div>
+                <!-- END .List -->
+                <footer class="Modal__footer remove-hairline"> <a role="button" class="Modal__btn u-color-danger" data-dismiss="modal">取消</a> </footer>
+                <!-- /.Modal__footer -->
+            </div>
+            <!-- /.Modal__body -->
+        </div>
+        <!-- /.Modal -->
+    </body>
+
+</html>

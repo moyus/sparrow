@@ -1,0 +1,32 @@
+.u-inline {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-centerBlock {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.u-clearfix {
+  @include clearfix;
+}
+
+.u-pullLeft {
+  float: left !important;
+}
+.u-pullRight {
+  float: right !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-show {
+  display: block !important; 
+}

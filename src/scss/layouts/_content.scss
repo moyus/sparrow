@@ -1,0 +1,42 @@
+/*
+|-------------------------------------------------------------------------------
+| #Content layouts
+|-------------------------------------------------------------------------------
+|
+|
+*/
+/* Container
+---------------------------------*/
+.l-container {
+  margin-left: $container-spacer-x;
+  margin-right: $container-spacer-x;
+}
+
+/* Content
+---------------------------------*/
+.l-content {
+  margin-left: $content-spacer-x;
+  margin-right: $content-spacer-x;
+}
+
+/* Group
+---------------------------------*/
+.l-group {
+  margin: 0 $group-spacer-x $group-spacer-y $group-spacer-x; 
+}
+
+.l-group__title {
+  position: relative;
+  display: block;
+  color: $sub-title-color;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0 $group-spacer-x 5px $group-spacer-x;
+}
+
+.l-group__text {
+  position: relative;
+  display: block;
+  margin: -$group-spacer-y $group-spacer-x $group-spacer-y $group-spacer-x;
+  padding-top: 5px;
+}

@@ -1,0 +1,56 @@
+/*
+|-------------------------------------------------------------------------------
+| #TabBar
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.TabBar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $tabBar-height;
+  background-color: $tabBar-bg-color;
+  -webkit-backdrop-filter: blur(2px);
+  z-index: $tabBar-zIndex;
+  @include hairline-top($tabBar-border-color);
+  @include remove-select();
+  ~ .l-main .l-main__inner {
+    padding-bottom: $tabBar-height;
+  }
+  &.is-relative {
+    position: relative;
+  }
+}
+
+.TabBar__inner {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $site-max-width;
+  width: 100%;
+}
+
+.TabBar__left {
+  order: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.TabBar__right {
+  order: 3;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}

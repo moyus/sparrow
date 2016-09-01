@@ -1,0 +1,46 @@
+@function get-col-percent($column-num) {
+
+  @return $column-num / $grid-columns * 100%;
+
+}
+
+@mixin loop-cols() {
+
+  .l-col {
+    flex: 1 1 0;
+    min-height: 1px;
+    max-width: 100%;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+  @for $i from 1 through $grid-columns {
+    .l-col-#{$i} {
+      flex: 0 0 get-col-percent($i);
+      min-height: 1;
+      max-width: get-col-percent($i);
+      padding-left: ($grid-gutter-width / 2);
+      padding-right: ($grid-gutter-width / 2);
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    @if ( $i != $grid-columns ) {
+      .l-col-offset-#{$i} {
+        margin-left: get-col-percent($i);
+      }
+    }
+  }
+}
+
+@mixin make-grid() {
+  @include loop-cols();
+}
+
+@mixin make-order-utils() {
+  .u-first {
+    order: -1 !important;
+  }
+  .u-last {
+    order: 9999 !important;
+  }
+}

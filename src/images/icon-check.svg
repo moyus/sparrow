@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>check_circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Message" transform="translate(-211.000000, -512.000000)" fill="#9E9E9E">
+            <g id="check_circle" transform="translate(211.000000, 512.000000)">
+                <path d="M9.984,0 C15.515,0 19.968,4.453 19.968,9.984 C19.968,15.515 15.515,19.968 9.984,19.968 C4.453,19.968 0,15.515 0,9.984 C0,4.453 4.453,1.77635684e-15 9.984,1.77635684e-15 L9.984,0 Z M6.67154577,9.09019925 L9.20313582,11.5349273 L14.3130001,5 L16.0765171,6.37985381 L9.32734079,15 L5,10.8211356 L6.67154577,9.09019925 Z" id="shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

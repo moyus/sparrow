@@ -1,0 +1,67 @@
+/*
+|-------------------------------------------------------------------------------
+| #App layout
+|-------------------------------------------------------------------------------
+|
+|
+*/
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.l-app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.is-modal-open,
+.is-alert-open,
+.is-notify-open {
+  .l-main {
+    overflow: hidden;
+  }
+}
+
+.is-modal-open,
+.is-alert-open {
+  .l-app {
+    filter: blur(12px);
+  }
+}
+
+.l-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.l-main__inner {
+  order: 2;
+  max-width: $site-max-width;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.l-main__left {
+  order: 1;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.l-main__right {
+  order: 3;
+  flex: 1;
+  overflow: hidden;
+}

@@ -1,0 +1,63 @@
+/*
+|-------------------------------------------------------------------------------
+| #Comments
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Container
+---------------------------------*/
+.Comment-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Block
+---------------------------------*/
+.Comment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: $comment-spacer-y $comment-spacer-x;
+}
+
+/* Elements
+---------------------------------*/
+.Comment__left {
+  + .Comment__body {
+    margin-left: $spacer-x-base;
+  }
+}
+
+.Comment__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+}
+
+.Comment__body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.Commment__header {
+
+}
+
+.Comment__content {
+  color: $desc-color;
+  font-size: 14px;
+}
+
+.Comment__title {
+  font-size: 14px;
+  color: $sub-title-color;
+}
+
+.Comment__meta {
+  font-size: 12px;
+  color: $desc-color;
+}

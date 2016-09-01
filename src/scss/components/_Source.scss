@@ -1,0 +1,41 @@
+/*
+|-------------------------------------------------------------------------------
+| #Source
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Source {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $desc-color;
+}
+
+/* Elements
+---------------------------------*/
+.Source__left {
+  margin-right: .5em;
+  img {
+    vertical-align: bottom;
+  }
+}
+
+.Source__content {
+
+}
+
+.Source__title {
+  color: $sub-title-color;
+  font-size: .9em;
+  margin: 0;
+}
+
+.Source__meta {
+  font-size: .8em;
+  color: $desc-color;
+}

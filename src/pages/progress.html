@@ -1,0 +1,36 @@
+{% extends 'master.nunjucks' %}
+{% block title %}进度条 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+	<div class="l-main__inner u-bg-white">
+	    <div class="l-content l-group u-pt30">
+            <div class="Progress">
+                <div class="Progress__bar" style="width: 70%;">
+                    <span class="Progress__tip">70%</span>
+                </div>
+            </div>
+            <!-- END .Progress -->
+	    </div>
+        <div class="l-content l-group">
+            <ul class="Step">
+                <li class="Step__item"><span class="Step__tip">1</span></li>
+                <li class="Step__item is-active"><span class="Step__tip">2</span></li>
+                <li class="Step__item"><span class="Step__tip">3</span></li>
+                <li class="Step__item"><span class="Step__tip">4</span></li>
+            </ul>
+            <!-- END .Step -->
+        </div>
+	</div>
+</main>
+<!-- END .Main -->
+{% endblock %}

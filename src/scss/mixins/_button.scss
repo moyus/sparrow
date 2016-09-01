@@ -1,0 +1,34 @@
+@mixin btn-variant($text-color, $background-color) {
+  & {
+    color: $text-color;
+    background-color: $background-color;
+  }
+
+  &:active, &.is-active {
+    background-color: mix($color-black, $background-color, $mix-level-2);
+  }
+
+  &[disabled],
+  &.is-disabled,
+  fieldset[disabled] & {
+    &,
+    &:active, &.is-active {
+      opacity: .65;
+      cursor: not-allowed;
+      background-color: mix($color-white, $background-color, $mix-level-4);
+    }
+  }
+
+  &.is-loading {
+    color: transparent;
+    &:before {
+      border-left-color: #fff !important;
+      border-bottom-color: #fff !important;
+    }
+    &:focus,
+    &:active,
+    &:hover {
+      color: transparent
+    }
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Sparrow">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <title>卡片 · Sparrow</title>
+        <link rel="stylesheet" href="assets/css/sparrow.css">
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+        <script src="assets/js/zepto.min.js"></script>
+        <script src="assets/js/sparrow.js"></script>
+    </head>
+
+    <body>
+        <div id="app" class="l-app">
+            <div class="TabBar">
+                <div class="TabBar__inner">
+                    <div class="Nav"> <a href="index.html" class="Nav__item">返回</a>
+                        <!-- END .Nav__item -->
+                    </div>
+                    <!-- END .Nav -->
+                </div>
+            </div>
+            <!-- .TabBar -->
+            <main class="l-main">
+                <div class="l-main__inner">
+                    <div class="u-ptb10"></div>
+                    <div class="Card">
+                        <header class="Card__header l-level">
+                            <div class="l-level__left">
+                                <div class="Source">
+                                    <div class="Source__left"> <img data-src="holder.js/24x24?text=if" class="avatar avatar--xs"> </div>
+                                    <!-- END .Source -->
+                                    <div class="Source__content"> 来自：爱范儿 </div>
+                                    <!-- END .Source__content -->
+                                </div>
+                                <!-- END .Source -->
+                            </div>
+                            <!-- END .l-level__left -->
+                        </header>
+                        <!-- END .Card__header -->
+                        <div class="Card__media"> <img data-src="holder.js/700x300?text=Hello"> </div>
+                        <!-- END .Card__media -->
+                        <div class="Card__body">
+                            <h3 class="Card__title">我曾是诺基亚员工，关于这家公司，我想告诉你这些</h3>
+                            <div class="Card__content"> 2009 年，N900 的发布曾给 Nokia 带来短暂的希望，虽然这个希望很快就随着 MeeGo 破裂了。Nokia 衰败前的最后时刻是什么样的呢？ </div>
+                            <!-- END .Card__content -->
+                        </div>
+                        <!-- END .Card__body -->
+                        <footer class="Card__footer l-level Card__meta">
+                            <div class="l-level__left">
+                                <div class="l-level__item">一天前</div>
+                            </div>
+                            <!-- END .l-level__left -->
+                            <div class="l-level__right">
+                                <div class="l-level__item">82赞</div>
+                                <div class="l-level__item">·</div>
+                                <div class="l-level__item">24评论</div>
+                            </div>
+                            <!-- END .l-level__right -->
+                        </footer>
+                        <!-- END .Card__footer -->
+                    </div>
+                    <!-- END .Card -->
+                    <div class="l-content">
+                        <div class="Card Card--inset">
+                            <header class="Card__header l-level">
+                                <div class="l-level__left">
+                                    <div class="Source">
+                                        <div class="Source__left"> <img data-src="holder.js/32x32?text=FN" class="avatar avatar--sm"> </div>
+                                        <!-- END .Source -->
+                                        <div class="Source__content">
+                                            <h4 class="Source__title">Friedrich Nietzsche</h4>
+                                            <div class="Source__meta">Jun 212 · min read</div>
+                                        </div>
+                                        <!-- END .Source__content -->
+                                    </div>
+                                    <!-- END .Source -->
+                                </div>
+                                <!-- END .l-level__left -->
+                            </header>
+                            <!-- END .Card__header -->
+                            <div class="Card__body">
+                                <div class="Card__content"> You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist. </div>
+                                <!-- END .Card__content -->
+                            </div>
+                            <!-- END .Card__body -->
+                            <footer class="Card__footer l-level Card__meta">
+                                <div class="l-level__left">
+                                    <div class="l-level__item">82赞</div>
+                                    <div class="l-level__item">·</div>
+                                    <div class="l-level__item">24评论</div>
+                                </div>
+                                <!-- END .l-level__left -->
+                                <div class="l-level__right">
+                                    <div class="l-level__item">收藏</div>
+                                </div>
+                                <!-- END .l-level__right -->
+                            </footer>
+                            <!-- END .Card__footer -->
+                        </div>
+                        <!-- END .Card -->
+                    </div>
+                    <!-- END .l-content -->
+                </div>
+                <!-- END .l-main__inner -->
+            </main>
+            <!-- END .l-main -->
+        </div>
+        <!-- END .l-app -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                FastClick.attach(document.body);
+            }, false);
+            (function($)
+            {
+                $('.js-surprise').on('click', function()
+                {
+                    sal(
+                    {
+                        title: '极尽利用',
+                        text: '在PC端限制主内容宽度以达到最佳显示效果，还能利用空余的部分显示更多隐藏内容！',
+                        confirmBtnText: '膜拜'
+                    });
+                });
+            })(Zepto);
+        </script>
+    </body>
+
+</html>

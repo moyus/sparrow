@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Message" transform="translate(-283.000000, -512.000000)" fill="#9E9E9E">
+            <g id="cancel" transform="translate(283.000000, 512.000000)">
+                <path d="M15.016,13.609 L11.407,10 L15.016,6.391 L13.61,4.985 L10.001,8.594 L6.392,4.985 L4.986,6.391 L8.595,10 L4.986,13.609 L6.392,15.015 L10.001,11.406 L13.61,15.015 L15.016,13.609 Z M10,0.016 C15.531,0.016 19.984,4.469 19.984,10 C19.984,15.531 15.531,19.984 10,19.984 C4.469,19.984 0.016,15.531 0.016,10 C0.016,4.469 4.469,0.016 10,0.016 L10,0.016 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

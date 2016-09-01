@@ -1,0 +1,46 @@
+/*
+|-------------------------------------------------------------------------------
+| #Notice
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Notice {
+  position: relative;
+  border-radius: $notice-border-radius;
+  padding: $notice-padding;
+  margin-bottom: $notice-spacer-y;
+  color: $frame-text-color;
+  border: 1px solid $frame-border-color;
+  background-color: $frame-bg-color;
+  &.has-close {
+    padding-right: 30px;
+  }
+}
+
+
+/* Elements
+---------------------------------*/
+.Notice__close {
+  position: absolute;
+  top: $notice-padding;
+  right: $notice-padding;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  color: rgba(0,0,0,.3);
+}
+
+// Modifiers
+@each $key, $v in $notice-palette {
+  .Notice--#{$key} {
+    @include notice-variant(darken($v, 65%), $v, $v);
+  }
+}
+
+.Notice--sharp {
+  border-radius: 0;
+}

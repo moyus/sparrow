@@ -1,0 +1,138 @@
+/*
+|-------------------------------------------------------------------------------
+| #Nav
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Nav {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: $nav-zIndex;
+}
+
+/* Elements
+---------------------------------*/
+.Nav__item {
+  flex: 1;
+  width: 1%; // make all nav items equal width.
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $nav-color;
+  font-size: 16px;
+  @include oneline();
+}
+
+.Nav__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: inherit;
+  &.is-active {
+    &,
+    .Nav__label,
+    .Nav__icon {
+      color: $nav-active-color;
+    }
+  }
+}
+
+.Nav__label {
+  position: relative;
+  display: block;
+  color: $nav-label-color;
+  font-size: 10px;
+  line-height: 12px;
+  @include oneline();
+}
+
+.Nav__icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  font-size: 28px;
+  display: flex;
+  color: $nav-color;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modifiers
+---------------------------------*/
+.Nav--tabs {
+  align-self: stretch;
+  .Nav__link {
+    align-self: stretch;
+    &.is-active {
+      box-shadow: inset 0 -2px 0 0 $nav-tabs-active-color;
+    }
+  }
+}
+
+.Nav--segmented {
+  display: inline-flex;
+  justify-content: center;
+  &.is-justify {
+    .Nav__item {
+      flex: 1;
+      width: 1%;
+    }
+  }
+  .Nav__link {
+    font-size: 13px;
+    line-height: 1;
+    padding: 8px 16px;
+    &:active,
+    &.is-active {
+      color: $nav-segmented-color;
+      background-color: $nav-segmented-bg;
+      .Nav__link,
+      .Nav__label,
+      .Nav__icon {
+        color: $nav-segmented-color;
+      }
+    }
+  }
+  .Nav__item {
+    flex: none;
+    width: auto;
+    color: $nav-segmented-bg;
+    border: 1px solid $nav-segmented-bg;
+    &:not(:last-child) {
+      border-right: 0;
+    }
+    &:first-child {
+      border-top-left-radius: $nav-segmented-border-radius;
+      border-bottom-left-radius: $nav-segmented-border-radius;
+    }
+    &:last-child {
+      border-top-right-radius: $nav-segmented-border-radius;
+      border-bottom-right-radius: $nav-segmented-border-radius;
+    }
+
+  }
+
+}
+
+/* Misc
+---------------------------------*/
+.tab-content {
+  .tab-pane {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}

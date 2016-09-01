@@ -1,0 +1,147 @@
+/*
+|-------------------------------------------------------------------------------
+| #List
+|-------------------------------------------------------------------------------
+|
+|
+*/
+
+/* Container
+---------------------------------*/
+.List-group {
+  position: relative;
+  margin-bottom: $list-group-spacer-y;
+  background-color: $list-group-bg-color;
+  @include hairline-border($list-group-border-color, 0);
+}
+
+.List-gap {
+  position: relative;
+  width: 100%;
+  padding: 5px $cell-spacer-x;
+  line-height: 1.5;
+  font-size: 12px;
+  background-color: $list-divider-color;
+  @include oneline;
+}
+
+/* Block
+---------------------------------*/
+.List {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .List {
+    @include hairline-top($cell-line-color);
+  }
+}
+
+/* Modifiers
+---------------------------------*/
+.List-inset {
+  margin-left: $list-group-inset-spacer-x;
+  margin-right: $list-group-inset-spacer-x;
+  border-radius: $list-group-inset-border-radius;
+  @include hairline-border($list-group-border-color, $list-group-inset-border-radius);
+}
+
+.List--actions {
+  margin: 0;
+  text-align: center;
+  @include remove-hairline();
+  .Cell {
+    padding-left: 0;
+  }
+  .Cell__body {
+    padding-right: 0;
+  }
+}
+
+/* Block
+---------------------------------*/
+.Cell {
+  position: relative;
+  padding-left: $cell-spacer-x;
+  @include remove-select();
+
+  &:first-child > .Cell__body {
+    @include hairline-transparent(top);
+  }
+
+}
+
+/* Elements
+---------------------------------*/
+.Cell__body {
+  position: relative;
+  color: inherit;
+  display: flex;
+  align-items: stretch;
+  min-height: 44px;
+  padding-right: $cell-spacer-x;
+  @include hairline-top($cell-line-color);
+}
+
+.Cell__media {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  + .Cell__inner {
+    margin-left: $spacer-x-base
+  }
+
+  i + i,
+  img + img {
+    margin-left: $spacer-x-sm
+  }
+  img {
+    vertical-align: bottom;
+  }
+}
+
+.Cell__inner {
+  flex: 1;
+  display: flex;
+  color: $text-color;
+  font-size: $cell-font-size;
+  align-items: center;
+  + .Cell__media {
+    margin-left: $spacer-x-base;
+  }
+}
+
+.Cell__content {
+  flex: 1;
+}
+
+.Cell__after {
+  padding-left: $spacer-x-sm;
+  color: $desc-color;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Modifiers
+---------------------------------*/
+.Cell--link {
+  .Cell__body {
+    padding-right: 35px;
+    background-image: url(arrow-right.svg);
+    background-position: calc(100% - #{$cell-spacer-x}) center;
+    background-size: auto 13px;
+    background-repeat: no-repeat;
+  }
+}
+
+.Cell--link,
+.Cell.watch-active {
+  &:active {
+    background-color: $cell-active-bg;
+    > .Cell__body,
+    & + .Cell > .Cell__body {
+      @include hairline-transparent(top);
+    }
+  }
+}

@@ -1,0 +1,74 @@
+/*
+|-------------------------------------------------------------------------------
+| #Cards
+|-------------------------------------------------------------------------------
+|
+|
+|
+*/
+
+/* Block
+---------------------------------*/
+.Card {
+  position: relative;
+  background-color: $card-bg-color;
+  margin-bottom: $card-spacer-y;
+  @include hairline-border($card-border-color, 0);
+}
+
+/* Elements
+---------------------------------*/
+.Card__header {
+  position: relative;
+  padding: $card-padding;
+  + .Card__body,
+  + .Card__footer {
+    padding-top: 0;
+  }
+}
+
+.Card__body {
+  position: relative;
+  padding: $card-padding;
+  + .Card__footer {
+    padding-top: 0;
+  }
+}
+
+.Card__footer {
+  position: relative;
+  padding: $card-padding;
+}
+
+.Card__title {
+  font-size: 18px;
+  margin: 0 0 $spacer-x-sm 0;
+  font-weight: bolder;
+  line-height: 1.2;
+  color: $sub-title-color;
+}
+
+.Card__content {
+
+}
+
+.Card__meta {
+  color: $desc-color;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.Card__media {
+  img {
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: bottom;
+  }
+}
+
+/* Modifers
+---------------------------------*/
+.Card--inset {
+  border-radius: $card-inset-border-radius;
+  @include hairline-border($card-border-color, $card-inset-border-radius);
+}

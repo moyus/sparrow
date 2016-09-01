@@ -1,0 +1,138 @@
+/*
+|-------------------------------------------------------------------------------
+| #Form
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.form-group {
+  margin-bottom: $form-group-spacer-y;
+}
+
+.form-label {
+  color: $sub-title-color;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 5px;
+  @include oneline;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  border-radius: $form-control-border-radius;
+  background-color: $form-control-bg;
+}
+
+.form-input,
+.form-static {
+  flex: 1;
+  width: 100%;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  background: none;
+  + .form-addon {
+    padding-left: 0;
+  }
+}
+
+select.form-input {
+  background-image: url(arrow-down.svg);
+  background-position: calc(100% - 10px) center;
+  background-size: 12px 6px;
+  background-repeat: no-repeat;
+}
+select[multiple] {
+  padding: 6px;
+  option {
+    padding: 4px;
+    margin-bottom: 2px;
+    border-radius: $form-control-border-radius;
+  }
+}
+
+textarea.form-input {
+  resize: vertical;
+}
+
+.form-text {
+  display: block;
+  margin: 5px 0 0 0;
+}
+
+.form-addon {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: $desc-color;
+  line-height: 24px;
+  padding: 10px;
+  + .form-input,
+  + .form-static {
+    padding-left: 0
+  }
+}
+
+/* List Cell Form
+---------------------------------*/
+.Cell__label {
+  font-size: 16px;
+  color: $desc-color;
+  line-height: 44px;
+  align-self: flex-start;
+  margin-right: 5px;
+}
+
+.Cell__input {
+  width: 100%;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 0;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  background: none;
+}
+
+select.Cell__input {
+  background-image: url(arrow-down.svg);
+  background-position: right center;
+  background-size: 12px 6px;
+  background-repeat: no-repeat;
+}
+
+textarea.Cell__input {
+  resize: vertical;
+}
+
+label.Cell__radio,
+label.Cell__checkbox {
+    cursor: pointer;
+    & > * {
+        pointer-events: none;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+        ~ .Cell__content {
+            padding-right: 20px;
+        }
+        &.is-active ~ .Cell__content,
+        &:checked ~ .Cell__content {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2013%2010'%3E%3Cpolygon%20fill%3D'%23007aff'%20points%3D'11.6%2C0%204.4%2C7.2%201.4%2C4.2%200%2C5.6%204.4%2C10%204.4%2C10%204.4%2C10%2013%2C1.4%20'%2F%3E%3C%2Fsvg%3E");
+            background-position: right center;
+            background-size: 13px 10px;
+            background-repeat: no-repeat;
+        }
+    }
+}

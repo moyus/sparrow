@@ -1,0 +1,90 @@
+/*
+|-------------------------------------------------------------------------------
+| #Progress
+|-------------------------------------------------------------------------------
+|
+|
+*/
+/* 1.0 Progress Bar
+---------------------------------*/
+.Progress {
+  position: relative;
+  display: block;
+  height: 3px;
+  border-radius: 4px;
+  background-color: $frame-active-bg-color;
+}
+
+.Progress__bar {
+    position: relative;
+    height: 100%;
+    border-radius: 4px;
+    background-color: $progress-bar-bg;
+}
+
+.Progress__tip {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  bottom: 100%;
+}
+
+/* 2.0 - Step Progress
+---------------------------------*/
+.Step {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.Step__item {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &:first-child {
+    justify-content: flex-start;
+  }
+
+  &.is-active ~ .Step__item {
+    &:before {
+      background-color: $frame-border-color;
+    }
+    .Step__tip {
+      background-color: $frame-border-color;
+    }
+  }
+
+  &:nth-child(n+2) {
+    flex: 1;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      margin-top: -1px;
+      right: 25px;
+      height: 2px;
+      background-color: $step-active-bg;
+    }
+  }
+}
+
+.Step__tip {
+  display: block;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $step-active-bg;
+}

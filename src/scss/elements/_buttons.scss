@@ -1,0 +1,101 @@
+/*
+|-------------------------------------------------------------------------------
+| #Buttons
+|-------------------------------------------------------------------------------
+|
+|
+*/
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 12px;
+  border-radius: $button-border-radius-base;
+  color: $frame-text-color;
+  background-color: $button-bg-base;
+  border: 0;
+  outline: none;
+  white-space: nowrap;
+  @include remove-select();
+  &:active, &.is-active {
+    background-color: $frame-active-bg-color;
+  }
+  &.is-loading {
+    color: transparent;
+    cursor: not-allowed;
+    &::before {
+      animation: spin-around 500ms infinite linear;
+      border: 2px solid $desc-color;
+      border-radius: 8px;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+}
+
+/* Modifiers
+---------------------------------*/
+.btn--outline {
+  @include hairline-border($button-border-color-base, $button-border-radius-base);
+}
+
+.btn--primary {
+  @include btn-variant($color-white, $color-primary);
+}
+
+.btn--danger {
+  @include btn-variant($color-white, $color-danger);
+}
+
+.btn--info {
+  @include btn-variant($color-white, $color-info);
+}
+
+.btn--success {
+  @include btn-variant($color-white, $color-success);
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--sm {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 8px;
+  border-radius: $button-border-radius-sm;
+  &.btn--outline {
+    @include hairline-border-radius($button-border-radius-sm);
+  }
+}
+
+.btn--lg {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  border-radius: $button-border-radius-lg;
+  &.btn--outline {
+    @include hairline-border-radius($button-border-radius-lg);
+  }
+}
+
+.btn--sharp {
+  border-radius: 0;
+  &.btn--outline {
+    @include hairline-border-radius(0);
+  }
+}

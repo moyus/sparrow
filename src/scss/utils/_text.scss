@@ -1,0 +1,27 @@
+.u-text-center {
+  text-align: center !important;
+}
+.u-text-left {
+  text-align: left !important;
+}
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-truncated {
+  @include oneline;
+}
+.u-text-justified {
+  text-align: justify !important;
+}
+.u-text-nowrap {
+  white-space: nowrap !important;
+}
+
+// font size from 10px to 20px
+@for $i from 0 through 5 {
+  $scope-size: $i * 2 + 10;
+  .u-fontSize-#{$scope-size} {
+    font-size: #{$scope-size + 'px !important'};
+  }
+}

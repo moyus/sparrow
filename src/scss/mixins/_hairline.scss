@@ -1,0 +1,208 @@
+@mixin make-hairline($placement, $color) {
+  @if $placement == 'top' {
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      height: 1px;
+      background-color: $color;
+      transform-origin: 50% 0;
+      z-index: $hairline-zIndex;
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 2dppx),
+      (min-resolution: 192dpi) {
+        & {
+          transform: scaleY(.5);
+        }
+      }
+
+      @media
+      (-webkit-min-device-pixel-ratio: 3),
+      (min-resolution: 3dppx) {
+        & {
+          transform: scaleY(.33333333);
+        }
+      }
+
+    }
+  } @else if $placement == 'bottom' {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: $color;
+      transform-origin: 50% 100%;
+      z-index: $hairline-zIndex;
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 2dppx),
+      (min-resolution: 192dpi) {
+        & {
+          transform: scaleY(.5);
+        }
+      }
+
+      @media
+      (-webkit-min-device-pixel-ratio: 3),
+      (min-resolution: 3dppx) {
+        & {
+          transform: scaleY(.33333333);
+        }
+      }
+
+    }
+  } @else if $placement == 'right' {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $color;
+      transform-origin: 100% 50%;
+      z-index: $hairline-zIndex;
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 2dppx),
+      (min-resolution: 192dpi) {
+        & {
+          transform: scaleX(.5);
+        }
+      }
+
+      @media
+      (-webkit-min-device-pixel-ratio: 3),
+      (min-resolution: 3dppx) {
+        & {
+          transform: scaleX(.33333333);
+        }
+      }
+
+    }
+  }
+}
+
+
+@mixin make-border($color, $radius) {
+  &::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 1px $color;
+    border-radius: $radius;
+    transform-origin: left top;
+    box-sizing: border-box;
+    z-index: $hairline-zIndex;
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      & {
+        width: 200%;
+        height: 200%;
+        border-radius: $radius * 2;
+        transform: scale(0.5);
+      }
+    }
+
+    @media
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      & {
+        width: 300%;
+        height: 300%;
+        border-radius: $radius * 3;
+        transform: scale(.33333333);
+      }
+    }
+
+  }
+}
+
+@mixin hairline-border-color($color) {
+  &::after {
+    box-shadow: 0 0 0 1px $color
+  }
+}
+
+@mixin hairline-border-radius($radius) {
+  &::after {
+    border-radius: $radius;
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      & {
+        border-radius: $radius * 2;
+      }
+    }
+
+    @media
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      & {
+        border-radius: $radius * 3;
+      }
+    }
+
+  }
+}
+
+@mixin hairline-top($color) {
+  @include make-hairline('top', $color);
+}
+
+@mixin hairline-left($color) {
+  @include make-hairline('left', $color);
+}
+
+@mixin hairline-right($color) {
+  @include make-hairline('right', $color);
+}
+
+@mixin hairline-bottom($color) {
+  @include make-hairline('bottom', $color);
+}
+
+@mixin hairline-border($color, $radius) {
+  @include make-border($color, $radius);
+}
+
+@mixin hairline-transparent($placement) {
+  @if $placement == 'top' or $placement == 'left' {
+    &::before {
+      display: none;
+    }
+  }
+  @if $placement == 'bottom' or $placement == 'right' {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@mixin remove-hairline() {
+  &::before,
+  &::after {
+    display: none;
+  }
+}

@@ -1,0 +1,248 @@
+{% extends 'master.nunjucks' %}
+{% block title %}表单 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+    <div class="l-main__inner">
+        <div class="l-content l-group u-pt30">
+            <div class="l-group__title">常规表单</div>
+            <div class="form-group">
+                <div class="form-control">
+                    <input type="text" class="form-input" placeholder="姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="form-addon">尺寸</div>
+                    <select class="form-input">
+                        <option value="s">Small</option>
+                        <option value="m">Middle</option>
+                        <option value="l">Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="form-addon">价格</div>
+                    <div class="form-static">98</div>
+                    <div class="form-addon">元</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">优惠券</label>
+                <div class="form-control">
+                    <select class="form-input" multiple>
+                        <option value="10">10元</option>
+                        <option value="50">50元</option>
+                        <option value="100">100元</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-label">收货地址</div>
+                <div class="form-control">
+                    <textarea rows="5" class="form-input"></textarea>
+                </div>
+                <small class="form-text">我们将会以此地址为寄件标准</small>
+            </div>
+			<div class="form-group">
+				<div class="form-label">暗号</div>
+                <div class="form-control">
+                    <input type="password" class="form-input" value="123456">
+                    <div class="form-addon">
+                    	<i class="sicon-check u-bg-success"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn--primary btn--block btn--lg">提交</button>
+            </div>
+        </div>
+        <!-- END .l-group -->
+        <div class="l-group__title">列表表单</div>
+        <div class="List-group">
+            <ul class="List List--full">
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">输入框</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <input type="text" class="Cell__input" placeholder="文本输入框">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">数字</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <input type="tel" pattern="[0-9]*" class="Cell__input" placeholder="请输入你的手机号">
+                            </div>
+                            <div class="Cell__after">
+                                <button role="button" class="btn btn--outline btn--sm">发送验证码</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell Cell--select">
+                    <div class="Cell__body">
+                        <div class="Cell__label">国家</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <select class="Cell__input">
+                                    <option value="1">中国</option>
+                                    <option value="2">韩国</option>
+                                    <option value="3">日本</option>
+                                    <option value="4">新加坡</option>
+                                    <option value="5">菲律宾</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">内容</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <textarea rows="10" class="Cell__input" placeholder="说点啥吧..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+            </ul>
+        </div>
+        <!-- END .List-group -->
+        <div class="l-group__title">单选</div>
+        <div class="List-group">
+            <ul class="List List--full">
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__radio">
+                            <input type="radio" name="what" value="1" checked="checked">
+                            <div class="Cell__content">玩手机</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__radio">
+                            <input type="radio" name="what" value="2">
+                            <div class="Cell__content">看电影</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__radio">
+                            <input type="radio" name="what" value="3">
+                            <div class="Cell__content">逛街</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+            </ul>
+        </div>
+        <!-- END .List-group -->
+        <div class="l-group__title">多选</div>
+        <div class="List-group">
+            <ul class="List List--full">
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__checkbox">
+                            <input type="checkbox" name="multi" value="1" checked="checked">
+                            <div class="Cell__content">玩手机</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__checkbox">
+                            <input type="checkbox" name="multi" value="2">
+                            <div class="Cell__content">看电影</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell watch-active">
+                    <div class="Cell__body">
+                        <label class="Cell__inner Cell__checkbox">
+                            <input type="checkbox" name="multi" value="3" checked="checked">
+                            <div class="Cell__content">逛街</div>
+                        </label>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+            </ul>
+        </div>
+        <!-- END .List-group -->
+        <div class="l-group__title l-content">表单验证</div>
+        <div class="List-group">
+            <ul class="List List--full">
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">验证通过</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <input type="text" class="Cell__input" value="张三">
+                            </div>
+    						<div class="Cell__after">
+    							<i class="sicon-check u-bg-success"></i>
+    						</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+                <li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">验证失败</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <input type="password" class="Cell__input" value="123">
+                            </div>
+    						<div class="Cell__after">
+    							<i class="sicon-danger u-bg-danger"></i>
+    						</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+    			<li class="Cell">
+                    <div class="Cell__body">
+                        <div class="Cell__label">验证警告</div>
+                        <div class="Cell__inner">
+                            <div class="Cell__content">
+                                <input type="tel" pattern="[0-9]*" class="Cell__input" value="1861220981">
+                            </div>
+    						<div class="Cell__after">
+    							<i class="sicon-warning u-bg-warning"></i>
+    						</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END .Cell -->
+            </ul>
+        </div>
+        <!-- END .List-group -->
+    </div>
+    <!-- END .l-main__inner -->
+</main>
+<!-- END .l-main -->
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'master.nunjucks' %}
+{% block title %}按钮 · Sparrow{% endblock %}
+{% block content %}
+<div class="TabBar">
+    <div class="TabBar__inner">
+        <div class="Nav">
+            <a href="index.html" class="Nav__item">返回</a>
+            <!-- END .Nav__item -->
+        </div>
+        <!-- END .Nav -->
+    </div>
+</div>
+<!-- .TabBar -->
+<main class="l-main">
+	<div class="l-main__inner">
+        <div class="l-content u-pt30">
+    		<div class="l-group">
+                <a role="button" class="btn btn--outline u-mb10">Button</a>
+        		<a role="button" class="btn btn--primary u-mb10">Primary</a>
+        		<a role="button" class="btn btn--info u-mb10">Info</a>
+        		<a role="button" class="btn btn--danger u-mb10">Danger</a>
+				<a role="button" class="btn btn--success u-mb10">Success</a>
+    		</div>
+            <div class="l-group">
+                <a role="button" class="btn btn--outline u-mb10" disabled>Button</a>
+        		<a role="button" class="btn btn--primary u-mb10" disabled>Disabled</a>
+        		<a role="button" class="btn btn--info u-mb10" disabled>Disabled</a>
+        		<a role="button" class="btn btn--danger u-mb10" disabled>Disabled</a>
+        		<a role="button" class="btn btn--success u-mb10" disabled>Disabled</a>
+            </div>
+    	</div>
+    	<!-- /.content-block -->
+        <div class="l-content">
+    		<div class="l-group">
+				<a role="button" class="btn btn--primary btn--sm u-mb10">Small</a>
+	            <a role="button" class="btn btn--primary u-mb10">Base</a>
+	            <a role="button" class="btn btn--primary btn--lg u-mb10">Large</a>
+    		</div>
+    	</div>
+    	<!-- /.content-block -->
+        <div class="l-content">
+    		<div class="l-group">
+    			<a role="button" class="btn btn--primary btn--lg btn--block u-mb10">Large Button</a>
+    		</div>
+    	</div>
+    	<!-- /.content-block -->
+        <div class="l-content l-block">
+    		<div class="l-group">
+        		<a role="button" class="btn btn--primary is-loading u-mb10">Loading</a>
+    		</div>
+    	</div>
+    	<!-- /.content-block -->
+	</div>
+	<!-- END .l-main__inner -->
+</main>
+<!-- END .l-main -->
+{% endblock %}
