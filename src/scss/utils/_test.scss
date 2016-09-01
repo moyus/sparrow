@@ -7,12 +7,12 @@
 */
 .box-row {
   position: relative;
-  min-height: 1rem;
-  padding: .2rem 0;
-  margin-bottom: .5rem;
+  min-height: 15px;
+  padding: 4px 0;
+  margin-bottom: 8px;
   background-color: #007FFF;
   &.is-3h {
-    min-height: 3rem;
+    min-height: 45px;
   }
   .box-row {
     margin-bottom: 0;

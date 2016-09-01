@@ -12,7 +12,7 @@
   position: relative;
   border-radius: $notice-border-radius;
   padding: $notice-padding;
-  margin-bottom: 1rem;
+  margin-bottom: $notice-spacer-y;
   color: $frame-text-color;
   border: 1px solid $frame-border-color;
   background-color: $frame-bg-color;
