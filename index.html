@@ -5,25 +5,25 @@
         <meta charset="UTF-8">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Tea">
+        <meta name="apple-mobile-web-app-title" content="Sparrow">
         <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
         <meta name="format-detection" content="telephone=no, email=no">
         <title>Sparrow</title>
-        <link rel="stylesheet" href="assets/css/tea.css">
+        <link rel="stylesheet" href="assets/css/sparrow.css">
         <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
         <script src="//cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
         <script src="assets/js/zepto.min.js"></script>
-        <script src="assets/js/tea.js"></script>
+        <script src="assets/js/sparrow.js"></script>
     </head>
 
     <body>
-        <div id="app" class="app">
+        <div id="app" class="l-app">
             <div class="TabBar">
                 <div class="TabBar__left"> </div>
                 <!-- END .TabBar__right -->
                 <div class="TabBar__inner">
                     <ul class="Nav">
-                        <li class="Nav__item"> <a href="https://github.com/moyus/sparrow" class="Nav__link">
+                        <li class="Nav__item"> <a href="https://moyus.github.io/sparrow" class="Nav__link">
                         GitHub Repo
                     </a> </li>
                         <li class="Nav__item"> <a role="button" class="Nav__link">
@@ -47,10 +47,7 @@
                     </div>
                 </div>
                 <div class="l-main__inner">
-                    <div class="u-ptb15"></div>
-                    <div class="l-content">
-                        <div class="l-group__title">常规元素</div>
-                    </div>
+                    <div class="l-group__title u-pt30">常规元素</div>
                     <div class="List-group">
                         <ul class="List">
                             <li class="Cell Cell--link">
@@ -88,19 +85,10 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="Cell Cell--link">
-                                <a href="utilities.html" class="Cell__body">
-                                    <div class="Cell__inner">
-                                        <div class="Cell__content">辅助类</div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                     <!-- END .List -->
-                    <div class="l-content">
-                        <div class="l-group__title">组件</div>
-                    </div>
+                    <div class="l-group__title">组件</div>
                     <div class="List-group">
                         <ul class="List">
                             <li class="Cell Cell--link">
@@ -186,12 +174,25 @@
                         </ul>
                     </div>
                     <!-- END .List-group -->
+                    <div class="List-group">
+                        <ul class="List">
+                            <li class="Cell Cell--link">
+                                <a href="themes.html" class="Cell__body">
+                                    <div class="Cell__inner">
+                                        <div class="Cell__content">主题</div>
+                                        <div class="Cell__after">6</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END .List-group -->
                 </div>
                 <!-- END .l-main__inner -->
             </main>
             <!-- END .l-main-->
         </div>
-        <!-- END .app -->
+        <!-- END .l-app -->
         <script>
             document.addEventListener('DOMContentLoaded', function()
             {
