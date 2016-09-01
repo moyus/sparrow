@@ -15,10 +15,10 @@
     <script src="assets/js/sparrow.js"></script>
 </head>
 <body>
-    <div id="app" class="app">
+    <div id="app" class="l-app">
         {% block content %}{% endblock %}
     </div>
-    <!-- END .app -->
+    <!-- END .l-app -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         FastClick.attach(document.body);
