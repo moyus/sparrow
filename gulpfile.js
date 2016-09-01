@@ -10,29 +10,33 @@ var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
+var sizereport   = require('gulp-sizereport');
 var nunjucksRender = require('gulp-nunjucks-render');
 var prettify = require('gulp-prettify');
 var babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 
 var paths = {
+  root: {
+    src: "src",
+    dest: "app"
+  },
   styles: {
     src: 'src/scss',
-    dist: 'app/assets/css'
+    dest: 'app/assets/css'
   },
   scripts: {
     src: 'src/js',
-    dist: 'app/assets/js'
+    dest: 'app/assets/js'
   },
   assets: {
     src: 'src/assets',
-    dist: 'app/assets',
-    build: 'build'
+    dest: 'app/assets'
   },
   templates: {
     pages: 'src/pages',
     partials: 'src/templates',
-    dist: 'app'
+    dest: 'app'
   }
 };
 
@@ -54,7 +58,7 @@ gulp.task('scripts', function () {
     .pipe(sourcemaps.init())
     .pipe(concat('sparrow.js'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.scripts.dist))
+    .pipe(gulp.dest(paths.scripts.dest))
     .pipe(notify('scripts build successfully.'));
 });
 
@@ -76,7 +80,7 @@ gulp.task('styles', function () {
       extensionsAllowed: ['.gif', '.png', '.svg']
     }))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.styles.dist))
+    .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream())
     .pipe(notify('styles build successfully.'));
 });
@@ -86,7 +90,7 @@ gulp.task('styles', function () {
  */
 gulp.task('copy-assets', function () {
   return gulp.src(paths.assets.src + '/**/*')
-    .pipe(gulp.dest(paths.assets.dist));
+    .pipe(gulp.dest(paths.assets.dest));
 });
 
 /**
@@ -99,15 +103,15 @@ gulp.task('html:build', function () {
     .pipe(nunjucksRender({
       path: [paths.templates.partials]
     }))
-    .pipe(gulp.dest(paths.templates.dist));
+    .pipe(gulp.dest(paths.templates.dest));
 });
 
 gulp.task('html:prettify', function () {
-  return gulp.src(paths.templates.dist + '/**/*.html')
+  return gulp.src(paths.templates.dest + '/**/*.html')
     .pipe(prettify({
       indent_size: 4
     }))
-    .pipe(gulp.dest(paths.templates.dist));
+    .pipe(gulp.dest(paths.templates.dest));
 });
 
 gulp.task('html', gulp.series('html:build', 'html:prettify'));
@@ -125,6 +129,13 @@ gulp.task('watch', function (done) {
   gulp.watch(paths.assets.src + '/**/*', gulp.parallel('copy-assets'));
   gulp.watch("app/*.html").on('change', browserSync.reload);
   done();
+});
+
+gulp.task('size-report', function () {
+  return gulp.src(paths.root.dest + '/**/*')
+    .pipe(sizereport({
+      gzip: true
+    }))
 });
 
 /**
