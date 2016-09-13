@@ -121,7 +121,7 @@ gulp.task('html', gulp.series('html:build', 'html:prettify'));
  */
 gulp.task('watch', function (done) {
   gulp.watch(paths.styles.src + '/**/*.scss', gulp.parallel('styles'));
-  gulp.watch(paths.scripts.src + '/*.js', gulp.series('scripts', browserSync.reload));
+  gulp.watch(paths.scripts.src + '/*.js', gulp.parallel('scripts'));
   gulp.watch([
     paths.templates.pages + '/**/*.html',
     paths.templates.partials + '/**/*.nunjucks'
