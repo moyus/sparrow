@@ -31,8 +31,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   };
 
   var Default = {
-    show: true,
-    backdrop: true
+    show: true
   };
   /*
   |--------------------------------------------------------------------------
@@ -64,17 +63,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         $(document.body).addClass(ClassName.OPEN);
 
-        //backdrop
-        if (this._config.backdrop == true) {
-          var $old_backdrop = $('body > .backdrop');
-          if ($old_backdrop.length > 0) {
-            $old_backdrop.fadeIn(300);
-          } else {
-            var $new_backdrop = $('<div class="backdrop"></div>').hide().appendTo('body');
-            $new_backdrop.fadeIn('fast');
-          }
-        }
-
         $(this._element).css('display', 'flex');
         this.reflow(this._element);
         $(this._element).addClass(ClassName.IN);
@@ -93,16 +81,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         if (!this._isShown) {
           return;
-        }
-
-        //backdrop
-        if (this._config.backdrop == true) {
-          var $old_backdrop = $('body > .backdrop');
-          if ($old_backdrop.length > 0) {
-            $old_backdrop.fadeOut(400, function () {
-              $old_backdrop.remove();
-            });
-          }
         }
 
         $(document.body).removeClass(ClassName.OPEN);
@@ -202,7 +180,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     show: true,
     text: 'Loading',
     type: '',
-    size: '',
     timer: 2000,
     icon: ''
   };
@@ -290,11 +267,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             break;
         }
 
-        if (this._config.size == 'lg') {
-          className += ' Notify--lg';
-        }
-
-        var el = '<div class="Notify ' + className + '">\n                  <div class="Notify__content">\n                    ' + icon + '\n                    <div class="Notify__text">' + text + '</div>\n                  </div>\n                </div>';
+        var el = '<div class="Notify">\n                  <div class="Notify__content">\n                    ' + icon + '\n                    <div class="Notify__text">' + text + '</div>\n                  </div>\n                </div>';
 
         this._element = $(el);
       }
@@ -381,15 +354,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return;
         }
 
-        //backdrop
-        var $old_backdrop = $('body > .backdrop');
-        if ($old_backdrop.length > 0) {
-          $old_backdrop.fadeIn(300);
-        } else {
-          var $new_backdrop = $('<div class="backdrop"></div>').hide().appendTo('body');
-          $new_backdrop.fadeIn('fast');
-        }
-
         this._el = $(this._template).appendTo(this._container);
         this._container.addClass(ClassName.OPEN);
         this._addUIActions();
@@ -407,14 +371,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         if (!this._isShown && !self._el) {
           return;
-        }
-
-        //backdrop
-        var $old_backdrop = $('body > .backdrop');
-        if ($old_backdrop.length > 0) {
-          $old_backdrop.fadeOut(400, function () {
-            $old_backdrop.remove();
-          });
         }
 
         self._container.removeClass(ClassName.OPEN);

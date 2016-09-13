@@ -524,7 +524,7 @@ dl dd {
 ---------------------------------*/
 blockquote {
   border-left: 2px solid #ddd;
-  padding: .5rem .25rem;
+  padding: 8px 4px;
 }
 
 blockquote cite {
@@ -1159,7 +1159,7 @@ body {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow: hidden;
+  min-width: 0;
 }
 
 .l-level__left.is-expaned .l-level__item.is-expaned,
@@ -2620,9 +2620,6 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -2642,6 +2639,10 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   vertical-align: bottom;
 }
 
+/**
+ * 1. prevent content breaks and too wide, make child truncated.
+ *    https://css-tricks.com/flexbox-truncated-text/
+ */
 .Cell__inner {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2657,6 +2658,12 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 0;
+  /* 1 */
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .Cell__inner + .Cell__media {
@@ -2668,6 +2675,12 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-width: 0;
+  /* 1 */
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .Cell__after {
@@ -2681,10 +2694,15 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 /* Modifiers
 ---------------------------------*/
+.Cell--link {
+  display: block;
+}
+
 .Cell--link .Cell__body {
   padding-right: 35px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='26' viewBox='0 0 16 26' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Earrow-right%3C/title%3E%3Cpath d='M3 .272L15.728 13 3 25.728.879 23.607 11.485 13 .88 2.393z' fill='%238E8E93' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -2774,7 +2792,18 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
       -ms-flex-align: center;
               -ms-grid-row-align: center;
           align-items: center;
+  background-color: transparent;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
   z-index: 900;
+}
+
+.Modal.is-in {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Modal.is-out {
+  background-color: transparent;
 }
 
 /* Elements
@@ -2901,16 +2930,6 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
 
 .Modal__btn:active {
   background-color: #fff;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 800;
 }
 
 /* Modifiers
@@ -3408,7 +3427,7 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   color: #555;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -3500,9 +3519,9 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
 ---------------------------------*/
 .Notify__icon {
   display: block;
-  width: 20px;
-  height: 20px;
-  margin: 0 auto 8px auto;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px auto;
 }
 
 .Notify__icon[class^="sicon-"] {
@@ -3527,32 +3546,17 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 60px;
+  min-width: 80px;
   min-height: 60px;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: 16px;
   color: #fff;
   line-height: 1.2;
   text-align: center;
-}
-
-/* Modifiers
----------------------------------*/
-.Notify--lg .Notify__icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-}
-
-.Notify--lg .Notify__content {
-  width: 160px;
-  height: 120px;
-  padding: 15px 20px;
-  font-size: 16px;
 }
 
 /*
@@ -4517,14 +4521,14 @@ label.Cell__checkbox input[type="radio"]:checked ~ .Cell__content {
 */
 .box-row {
   position: relative;
-  min-height: 1rem;
-  padding: .2rem 0;
-  margin-bottom: .5rem;
+  min-height: 15px;
+  padding: 4px 0;
+  margin-bottom: 8px;
   background-color: #007FFF;
 }
 
 .box-row.is-3h {
-  min-height: 3rem;
+  min-height: 45px;
 }
 
 .box-row .box-row {
