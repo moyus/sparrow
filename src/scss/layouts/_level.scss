@@ -59,7 +59,7 @@
 .l-level__right {
   &.is-expaned {
     flex: 1;
-    overflow: hidden;
+    min-width: 0;
     .l-level__item.is-expaned {
       @include oneline;
     }

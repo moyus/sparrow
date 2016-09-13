@@ -85,7 +85,6 @@
 
 .Cell__media {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   + .Cell__inner {
     margin-left: $spacer-x-base
@@ -100,12 +99,18 @@
   }
 }
 
+/**
+ * 1. prevent content breaks and too wide, make child truncated.
+ *    https://css-tricks.com/flexbox-truncated-text/
+ */
 .Cell__inner {
   flex: 1;
   display: flex;
   color: $text-color;
   font-size: $cell-font-size;
   align-items: center;
+  min-width: 0; /* 1 */
+  @include oneline;
   + .Cell__media {
     margin-left: $spacer-x-base;
   }
@@ -113,6 +118,8 @@
 
 .Cell__content {
   flex: 1;
+  min-width: 0; /* 1 */
+  @include oneline;
 }
 
 .Cell__after {
@@ -120,12 +127,14 @@
   color: $desc-color;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 
 /* Modifiers
 ---------------------------------*/
 .Cell--link {
+  display: block;
   .Cell__body {
     padding-right: 35px;
     background-image: url(arrow-right.svg);
