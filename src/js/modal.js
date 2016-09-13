@@ -23,8 +23,7 @@
   }
 
   const Default = {
-    show: true,
-    backdrop: true
+    show: true
   }
   /*
   |--------------------------------------------------------------------------
@@ -51,16 +50,6 @@
 
       $(document.body).addClass(ClassName.OPEN)
 
-      //backdrop
-      if (this._config.backdrop == true) {
-        var $old_backdrop = $('body > .backdrop');
-        if ($old_backdrop.length > 0 ) {
-          $old_backdrop.fadeIn(300);
-        } else {
-          var $new_backdrop = $('<div class="backdrop"></div>').hide().appendTo('body');
-          $new_backdrop.fadeIn('fast');
-        }
-      }
 
       $(this._element).css('display', 'flex')
       this.reflow(this._element)
@@ -78,16 +67,6 @@
 
       if (!this._isShown) {
         return
-      }
-
-      //backdrop
-      if (this._config.backdrop == true) {
-        var $old_backdrop = $('body > .backdrop');
-        if ($old_backdrop.length > 0 ) {
-          $old_backdrop.fadeOut(400, function () {
-            $old_backdrop.remove();
-          });
-        }
       }
 
       $(document.body).removeClass(ClassName.OPEN)

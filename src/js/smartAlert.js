@@ -54,15 +54,6 @@
         return
       }
 
-      //backdrop
-      let $old_backdrop = $('body > .backdrop');
-      if ($old_backdrop.length > 0 ) {
-        $old_backdrop.fadeIn(300);
-      } else {
-        var $new_backdrop = $('<div class="backdrop"></div>').hide().appendTo('body');
-        $new_backdrop.fadeIn('fast');
-      }
-
       this._el = $(this._template).appendTo(this._container)
       this._container.addClass(ClassName.OPEN)
       this._addUIActions()
@@ -79,14 +70,6 @@
 
       if (!this._isShown && !self._el) {
         return
-      }
-
-      //backdrop
-      let $old_backdrop = $('body > .backdrop');
-      if ($old_backdrop.length > 0 ) {
-        $old_backdrop.fadeOut(400, function () {
-          $old_backdrop.remove();
-        });
       }
 
       self._container.removeClass(ClassName.OPEN)
