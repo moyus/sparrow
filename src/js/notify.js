@@ -16,7 +16,6 @@
     show: true,
     text: 'Loading',
     type: '',
-    size: '',
     timer: 2000,
     icon: ''
   }
@@ -97,16 +96,12 @@
             break;
       }
 
-      if (this._config.size == 'lg') {
-        className += ' Notify--lg'
-      }
-
-      let el = `<div class="Notify ${className}">
+      let el = `<div class="Notify">
                   <div class="Notify__content">
                     ${icon}
                     <div class="Notify__text">${text}</div>
                   </div>
-                </div>`
+                </div>`;
 
       this._element = $(el)
 

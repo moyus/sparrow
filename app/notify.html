@@ -29,7 +29,7 @@
             <!-- .TabBar -->
             <main class="l-main">
                 <div class="l-main__inner">
-                    <div class="l-content u-pt20"> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-loading">等待载入</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-text">文本消息</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-error">错误信息</button>                        <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-success">成功提示</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-lg">大尺寸提示</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cb">回调确认</button>                        </div>
+                    <div class="l-content u-pt20"> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-loading">等待载入</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-text">文本消息</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-error">错误信息</button>                        <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-success">成功提示</button> <button type="button" class="btn btn--primary btn--lg btn--block u-mb20 js-cb">回调确认</button> </div>
                 </div>
                 <!-- END .Main__inner -->
             </main>
@@ -87,15 +87,6 @@
                     {
                         text: '不错哟',
                         type: 'success'
-                    });
-                });
-                $('.js-lg').on('click', function(e)
-                {
-                    notify(
-                    {
-                        text: '不错哟',
-                        type: 'success',
-                        size: 'lg'
                     });
                 });
                 $('.js-cb').on('click', function(e)
