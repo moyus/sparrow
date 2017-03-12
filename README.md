@@ -12,7 +12,6 @@ npm run dev
 ```
 
 ##演示
-![2016-08-15_g-sparrow.jpg](http://cloud.liuxinyu.me/2016-08-15_g-sparrow.jpg)
 [https://moyus.github.io/sparrow](https://moyus.github.io/sparrow)
 
 ##UI库
